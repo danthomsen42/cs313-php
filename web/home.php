@@ -62,7 +62,10 @@
         //        });
         //    });
     </script>
-
+<?php 
+    echo "<img src='arcadeCabinetRotate.jpg>
+    
+    ?>
 
 </body>
 
