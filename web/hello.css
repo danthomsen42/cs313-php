@@ -16,9 +16,11 @@ body {
     background-color: darkgoldenrod;
 }
 
+/*
 div:hover {
     font-weight: bold;
 }
+*/
 
 #bodyMain {
     background-color: darkred;
@@ -27,12 +29,29 @@ div:hover {
 
 #mainMain {
     background-color: aliceblue;
-    height: 100%;
-    width: 75%;
+    height: 92%;
+    width: 45%;
     margin-left: 20%;
     position: absolute;
+    top:5%;
+    left: 5%
     /*    z-index: ; */
     /*    position:relative;*/
+}
+
+#pico8 {
+    width: 100%;
+    height: 100%;
+    /*         transform: scale(0.);*/
+    /*     transform-origin: 0% 0% 0px;*/
+    /*           -ms-zoom: 0.75;*/
+    /*        -moz-transform: scale(0.75);*/
+    /*        -moz-transform-origin: 0 0;*/
+    /*        -o-transform: scale(0.75);*/
+    /*        -o-transform-origin: 0 0;*/
+    /*        -webkit-transform: scale(0.75);*/
+    /*        -webkit-transform-origin: 0 0;*/
+    /*    zoom: 80%;*/
 }
 
 #AButton {
@@ -44,9 +63,9 @@ div:hover {
     padding: 10px;
     box-shadow: 0px 0px 50px blue;
     font-size: large;
-    position:absolute;
-    top:85%;
-    left: 60%;
+    position: absolute;
+    top: 85%;
+    left: 4%;
     color: white;
 }
 
@@ -60,45 +79,64 @@ div:hover {
     box-shadow: 0px 0px 50px green;
     font-size: large;
     position: absolute;
-        top:85%;
-    left: 70%;
+    top: 85%;
+    left: 12%;
     color: white;
 }
 
 #DButtonUp {
     position: absolute;
-    top: 80%;
-    left: 30%
+    top: 20%;
+    left: 9%
 }
 
 #DButtonDown {
     position: absolute;
-    top: 90%;
-    left: 30%
+    top: 30%;
+    left: 9%
 }
 
 #DButtonLeft {
     position: absolute;
-    top: 85%;
-    left: 25%
+    top: 25%;
+    left: 4%
 }
 
 #DButtonRight {
     position: absolute;
-    top: 85%;
-    left: 35%
+    top: 25%;
+    left: 14%
 }
-#pico8{
-    width: 100%;
-    height: 100%;
-/*         transform: scale(0.);*/
-/*     transform-origin: 0% 0% 0px;*/
-/*           -ms-zoom: 0.75;*/
-/*        -moz-transform: scale(0.75);*/
-/*        -moz-transform-origin: 0 0;*/
-/*        -o-transform: scale(0.75);*/
-/*        -o-transform-origin: 0 0;*/
-/*        -webkit-transform: scale(0.75);*/
-/*        -webkit-transform-origin: 0 0;*/
-/*    zoom: 80%;*/
+
+
+
+#start {
+    position: absolute;
+    top: 55%;
+    left: 4%
+}
+
+#select {
+    position: absolute;
+    top: 55%;
+    left: 12%
+}
+#HomeLogo{
+    color: white;
+/*    font-family: cursive;*/
+    font-family: "Snell Roundhand", cursive;
+    font-weight: 600;
+    font-size: 24px;
+     position: absolute;
+    top: 5%;
+    left: 2%
+        
+}
+
+#toughCookie{
+    width: 20%;
+    position: absolute;
+    left:75%;
+    top: 5%;
+    color: white;
 }
