@@ -63,7 +63,7 @@
         //    });
     </script>
 <?php 
-    echo "<img src='arcadeCabinetRotate.jpg>
+    echo "<img src='arcadeCabinetRotate.jpg>"
     
     ?>
 
