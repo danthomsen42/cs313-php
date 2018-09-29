@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" type="text/css" href="hello.css">
+</head>
+
+<body id="bodyMain">
+
+    <div id="mainMain">
+        <object id="pico8" class="pico8" type="text/html" data="https://danthomsen42.github.io/project-games/green-cube/index.html#zoom=10">
+        </object>
+    </div>
+    <div class="konami" id="konami">
+        <button id="AButton" value="A" onclick="konamiCode+=this.value; check()">A</button>
+        <button id="BButton" value="B" onclick="konamiCode+=this.value">B</button>
+        <button id="DButtonUp" class="btn DButtonUp" value="Up" onclick="konamiCode+=this.value">▲</button>
+        <button id="DButtonDown" value="Down" onclick="konamiCode+=this.value">▼</button>
+        <button id="DButtonLeft" value="Left" onclick="konamiCode+=this.value">◄</button>
+        <button id="DButtonRight" value="Right" onclick="konamiCode+=this.value">►</button>
+        <button id="start" onclick="check()">Start</button>
+        <button id="start" onclick='konamiCode = "" '>Select</button>
+    </div>
+    <script>
+        var konamiCode = "";
+        console.log("Konami: " + konamiCode)
+        //document.getElementById("konami")
+
+        if (konamiCode == "UpUpDownDownLeftRightLeftRightBA") {
+            
+        }
+
+        function check(){
+            console.log("Konami: " + konamiCode)
+             if (konamiCode == "UpUpDownDownLeftRightLeftRightBA") {
+            console.log("Level Up!!")
+                 alert("Level Up!");
+        }
+        }
+        
+        //Scroll Up
+        //        window.addEventListener('load', function(event){
+        //            console.log("Script finished loading and executing");
+        //        document.querySelector('.DButtonUp').addEventListener('click', function(e) {e.preventDefault();
+        //        document.querySelector('.pico8').scrollBy({top:100, left:0, behavior: 'smooth'});                                                                           
+        //        });
+        //    });
+    </script>
+
+
+</body>
+
+
+</html>

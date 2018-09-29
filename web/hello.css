@@ -1,0 +1,104 @@
+html,
+body {
+    height: 100%;
+    margin: 0%;
+}
+
+#one {
+    background-color: aqua;
+}
+
+#two {
+    background-color: chartreuse;
+}
+
+#three {
+    background-color: darkgoldenrod;
+}
+
+div:hover {
+    font-weight: bold;
+}
+
+#bodyMain {
+    background-color: darkred;
+    position: relative;
+}
+
+#mainMain {
+    background-color: aliceblue;
+    height: 100%;
+    width: 75%;
+    margin-left: 20%;
+    position: absolute;
+    /*    z-index: ; */
+    /*    position:relative;*/
+}
+
+#AButton {
+    background-color: blue;
+    border-radius: 100%;
+    width: 3%;
+    height: 6%;
+    /*        border: 1px solid;*/
+    padding: 10px;
+    box-shadow: 0px 0px 50px blue;
+    font-size: large;
+    position:absolute;
+    top:85%;
+    left: 60%;
+    color: white;
+}
+
+#BButton {
+    /*    color: aqua;*/
+    background-color: green;
+    border-radius: 100%;
+    width: 3%;
+    height: 6%;
+    padding: 10px;
+    box-shadow: 0px 0px 50px green;
+    font-size: large;
+    position: absolute;
+        top:85%;
+    left: 70%;
+    color: white;
+}
+
+#DButtonUp {
+    position: absolute;
+    top: 80%;
+    left: 30%
+}
+
+#DButtonDown {
+    position: absolute;
+    top: 90%;
+    left: 30%
+}
+
+#DButtonLeft {
+    position: absolute;
+    top: 85%;
+    left: 25%
+}
+
+#DButtonRight {
+    position: absolute;
+    top: 85%;
+    left: 35%
+}
+#pico8{
+    width: 100%;
+    height: 100%;
+/*         transform: scale(0.);*/
+/*     transform-origin: 0% 0% 0px;*/
+/*           -ms-zoom: 0.75;*/
+/*        -moz-transform: scale(0.75);*/
+/*        -moz-transform-origin: 0 0;*/
+/*        -o-transform: scale(0.75);*/
+/*        -o-transform-origin: 0 0;*/
+/*        -webkit-transform: scale(0.75);*/
+/*        -webkit-transform-origin: 0 0;*/
+/*    zoom: 80%;*/
+}
