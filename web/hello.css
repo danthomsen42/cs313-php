@@ -140,3 +140,10 @@ div:hover {
     top: 5%;
     color: white;
 }
+
+#ArcadeImage{
+    width: 10%;
+    position: absolute;
+    top: 65%;
+    left: 80%;
+}
