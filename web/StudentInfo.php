@@ -17,11 +17,14 @@
 //    $continents = $_POST["Continent"];
 //    if (isset($_POST['Continent']))
 //    {
-        if (!empty($_POST[Continent])){
+        if (!empty($_POST['Continent'])){
+            
         $continents = $_POST['Continent']
+            
         foreach( $continents as $key){
-        echo "$key <br>";
-    }
+        
+            echo "$key <br>";
+        }
     }
     
     
