@@ -14,23 +14,13 @@
     <?php echo $_POST["major"]; ?><br>
     <?php echo $_POST["comments"]; ?><br>
     <?php 
-//    $continents = $_POST["Continent"];
-//    if (isset($_POST['Continent']))
-//    {
-        if (!empty($_POST['Continent'])){
-            
-        $continents = $_POST['Continent']
-            
-        foreach( $continents as $key){
-        
-            echo "$key <br>";
-        }
+if(!empty($_POST['Continent'])){
+    foreach($_POST['Continent'] as $value){
+        echo $value.'<br>';
     }
+}
     
     
-//    foreach( $continents as $key){
-//        echo "$key <br>";
-//    }
     
 ?>
 </body>
