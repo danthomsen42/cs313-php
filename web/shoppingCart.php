@@ -29,20 +29,24 @@ session_start();
     $_SESSION['number2'] = $value2;
     $_SESSION['number3'] = $value3;
     $_SESSION['number4'] = $value4;
-    $_SESSION['Merchandise'] = $Merchandise;
+    
     
     
 if(!empty($_POST['Merchandise'])){
     foreach($_POST['Merchandise'] as $value){
+        $_SESSION['Merchandise'] = $value;
         echo $value.'<br>';
+
     }
 }
-    
-if(!empty($_POST['cost'])){
-    foreach($_POST['Merchandise'] as $value){
-        echo $value.'<br>';
-    }
-}
+   
+//    $_SESSION['Merchandise'] = value;
+//    
+//if(!empty($_POST['cost'])){
+//    foreach($_POST['Merchandise'] as $value){
+//        echo $value.'<br>';
+//    }
+//}
     
     
 
