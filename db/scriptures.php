@@ -10,7 +10,7 @@
     <?php require 'resources.php'?>
 
     <?php 
-    foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures') as $row)
+    foreach ($db->query('SELECT book, chapter, verse, content FROM Scriptures') as $row)
 {
   echo '<b>' . $row['book'] . '&nbsp' . $row['chapter'] . ':' . $row['verse'] . '</b> - \"' . $row['content'] . '\"';
 //  echo ' password: ' . $row['password'];
