@@ -1,7 +1,7 @@
 <?php
 //conect to DB
 require('dbConnect.php');
-$db get_db();
+$db = get_db();
 //query for all movies
 $stmt = $db->prepare('SELECT id, title, year, FROM movie');
 $stmt-> execute();
