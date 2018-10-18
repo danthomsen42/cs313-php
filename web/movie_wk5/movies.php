@@ -6,7 +6,7 @@ $db = get_db();
 $stmt = $db->prepare('SELECT id, title, year, FROM movie');
 $stmt-> execute();
 
-$rows = $stmt->fetchAll(PDO::FETHC_ASSOC);
+$movies = $stmt->fetchAll(PDO::FETHC_ASSOC);
 // go through each movie in th eresult and display it
 
 ?>
