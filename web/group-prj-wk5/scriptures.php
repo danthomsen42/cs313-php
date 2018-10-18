@@ -16,6 +16,13 @@
 }
     ?>
     
+    <form>
+    <label>Type Book</label>
+        <input type="text" value="" name="book"> <button type="submit" value="Search"></button>
+    
+    
+    </form>
+    
     </body>
 
 
