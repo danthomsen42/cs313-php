@@ -3,7 +3,7 @@
 require('dbConnect.php');
 //$db = get_db();
 //query for all movies
-$stmt = $db->prepare('SELECT id, title, year, FROM movie');
+$stmt = $db->prepare('SELECT id, title, year FROM movie');
 $stmt-> execute();
 
 $movies = $stmt->fetchAll(PDO::FETHC_ASSOC);
