@@ -22,7 +22,7 @@ $rows = $stmt->fetchAll(PDO::FETHC_ASSOC);
        foreach ($movies as $movie) {
            $title = $movie['title'];
            $year = $movie['year'];
-           echo "<li><p>$title ($year)</p></li>"
+           echo "<li><p>$title ($year)</p></li>";
        }   
           ?>
     </ul>
