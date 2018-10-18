@@ -6,7 +6,7 @@ require('dbConnect.php');
 $stmt = $db->prepare('SELECT id, title, year FROM movie');
 $stmt-> execute();
 
-$movies = $stmt->fetchAll(PDO::FETHC_ASSOC);
+$movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
 // go through each movie in th eresult and display it
 
 ?>
