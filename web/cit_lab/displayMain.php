@@ -26,7 +26,7 @@ $cls = $meh->fetchAll(PDO::FETCH_ASSOC);
            $classcode = $cls['course_Code'];
            $id = $cls['id'];
 //           $course_code = $ast['courseCode'];
-           echo "<li><p>$classcode</p></li>";
+           echo "<li><p>$id () $classcode</p></li>";
        } 
         
         
