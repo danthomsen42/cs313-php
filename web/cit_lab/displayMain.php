@@ -23,7 +23,7 @@ $cls = $meh->fetchAll(PDO::FETCH_ASSOC);
     <ul>
     <?php
        foreach ($cls as $cls) {
-           $classcode = $cls['course_Code'];
+           $classcode = $cls['courseCode'];
 //           $course_code = $ast['courseCode'];
            echo "<li><p>($classcode)</p></li>";
        } 
