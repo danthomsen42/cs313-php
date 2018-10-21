@@ -30,7 +30,7 @@ CREATE TABLE students
     , end_time TIMESTAMP
 );
 
-INSERT INTO classes(course_Code) VALUES ('CIT-111');
+INSERT INTO classes(course_Code) VALUES ('CIT111');
 INSERT INTO classes(course_Code) VALUES ('CIT-225');
 INSERT INTO classes(course_Code) VALUES ('CIT-325');
 INSERT INTO classes(course_Code) VALUES ('CIT-425');
