@@ -41,6 +41,6 @@ SELECT * FROM movie WHERE title LIKE '%w%';
 SELECT * FROM movie m
 JOIN actor_movie am ON m.id = am.movie_id
 JOIN actor a ON am.actor_id = a.id
-WHERE m.title LIKE 'The Devil%'
+WHERE m.title LIKE '%w%'
 
 ORDER BY a.birthYear;
