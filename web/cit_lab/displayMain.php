@@ -4,7 +4,7 @@ require('dbConnect.php');
 //$db = get_db();
 //query for all movies
 $stmt = $db->prepare('SELECT id, ast_name FROM assistants');
-$meh = $db->prepare('SELECT id, courseCode FROM classes');
+$meh = $db->prepare('SELECT id, course_Code FROM classes');
 $stmt-> execute();
 $meh-> execute();
 
@@ -23,7 +23,7 @@ $cls = $meh->fetchAll(PDO::FETCH_ASSOC);
     <ul>
     <?php
        foreach ($cls as $cls) {
-           $classcode = $cls['courseCode'];
+           $classcode = $cls['course_Code'];
 //           $course_code = $ast['courseCode'];
            echo "<li><p>($classcode)</p></li>";
        } 

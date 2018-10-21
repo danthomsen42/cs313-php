@@ -1,7 +1,7 @@
 CREATE TABLE classes
 (
     id SERIAL PRIMARY KEY
-    , courseCode VARCHAR(7) NOT NULL   
+    , course_Code VARCHAR(7) NOT NULL   
 );
 
 
@@ -16,7 +16,7 @@ CREATE TABLE assistant_classes
 (
     id SERIAL PRIMARY KEY
     , ast_name INT REFERENCES assistants(id)
-    , courseCode INT REFERENCES classes(id)
+    , course_Code INT REFERENCES classes(id)
 );
 
 CREATE TABLE students
@@ -30,16 +30,16 @@ CREATE TABLE students
     , end_time TIMESTAMP
 );
 
-INSERT INTO classes(courseCode) VALUES ('CIT_111');
-INSERT INTO classes(courseCode) VALUES ('CIT_225');
-INSERT INTO classes(courseCode) VALUES ('CIT_325');
-INSERT INTO classes(courseCode) VALUES ('CIT_425');
+INSERT INTO classes(course_Code) VALUES ('CIT-111');
+INSERT INTO classes(course_Code) VALUES ('CIT-225');
+INSERT INTO classes(course_Code) VALUES ('CIT-325');
+INSERT INTO classes(course_Code) VALUES ('CIT-425');
 
 INSERT INTO assistants(ast_name) VALUES ('William');
 INSERT INTO assistants(ast_name) VALUES ('Brooke');
 INSERT INTO assistants(ast_name) VALUES ('Andrew');
 
-INSERT INTO assistant_classes(ast_name, courseCode) VALUES
+INSERT INTO assistant_classes(ast_name, course_Code) VALUES
 (1, 2),
 (1, 3),
 (1, 4),
