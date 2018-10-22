@@ -8,7 +8,7 @@ $meh = $db->prepare('SELECT id, course_code FROM classes');
 $stmt-> execute();
 $meh-> execute();
 
-//$ast = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$ast = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $cls = $meh->fetchAll(PDO::FETCH_ASSOC);
 // go through each movie in th eresult and display it
 
