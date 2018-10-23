@@ -1,6 +1,6 @@
 <?php 
- require 'resources.php'
-echo $_POST['topic[1]'];
+ require 'resources.php';
+echo $_POST['topic'];
 
 
 ?>
