@@ -8,6 +8,28 @@ id SERIAL PRIMARY KEY
     
 );
 
+CREATE TABLE Topic
+(
+id SERIAL PRIMARY KEY
+    , name VARCHAR(50) NOT NULL
+
+);
+
+CREATE TABLE Scripture_Topic
+(
+id SERIAL PRIMARY KEY
+    , scripture_id int NOT NULL REFERENCES Scriptures(id)
+    , topic_id int NOT NULL REFERENCES Topic(id)
+    
+);
+
+
+INSERT INTO topic (name) VALUES ('FAITH');
+INSERT INTO topic (name) VALUES ('SACRIFICE');
+INSERT INTO topic (name) VALUES ('CHARITY');
+INSERT INTO topic (name) VALUES ('CHRIST');
+
+
 INSERT INTO Scriptures (book, chapter, verse, content)
 VALUES ('John',1,5, 'And the light shineth in darkness; and the darkness comprehended it not.');
 INSERT INTO Scriptures (book, chapter, verse, content)

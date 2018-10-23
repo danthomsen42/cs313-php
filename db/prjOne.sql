@@ -30,7 +30,7 @@ CREATE TABLE students
     , end_time TIMESTAMP
 );
 
-INSERT INTO classes(course_Code) VALUES ('CIT111');
+INSERT INTO classes(course_Code) VALUES ('CIT-111');
 INSERT INTO classes(course_Code) VALUES ('CIT-225');
 INSERT INTO classes(course_Code) VALUES ('CIT-325');
 INSERT INTO classes(course_Code) VALUES ('CIT-425');
@@ -47,3 +47,10 @@ INSERT INTO assistant_classes(ast_name, course_Code) VALUES
 (2, 3),
 (3, 1),
 (3, 2);
+
+SELECT 
+assistants.ast_name,
+classes.course_code
+FROM
+assistants
+INNER JOIN assistant_classes ON assistant_classes.ast_name = assistants.ast_name INNER JOIN assistant_classes ON assistant_classes.course_code = classes.course_code;

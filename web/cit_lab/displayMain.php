@@ -20,6 +20,8 @@ $cls = $meh->fetchAll(PDO::FETCH_ASSOC);
     
     </head>
 <body>
+    <header><h2>Assistants and Classes</h2></header>
+    
     <ul>
     <?php
        foreach ($cls as $class) {
