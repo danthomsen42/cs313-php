@@ -29,7 +29,7 @@
         Book: <input type="text" name="book" id="book"> <br>
         Chapter: <input type="text" name="chapter" id="chapter"> <br>
         Verse: <input type="text" name="verse" id="verse"><br>
-        Content:<textarea name="content" rows="5" cols="50"></textarea> <br>
+        Content:<br><textarea name="content" rows="5" cols="50"></textarea> <br>
         
         <?php 
         $stmt = $db->prepare('SELECT name FROM Topic');
@@ -39,7 +39,7 @@
                foreach ($topics as $topic) {
            $TopicName = $topic['name'];
 //           $course_code = $ast['courseCode'];
-           echo "<input type=\"checkbox\" name=\"" . $TopicName . "\">";
+           echo "<input type=\"checkbox\" name=\"" . $TopicName . "\">" . $TopicName . "<br>";
        }   
         
         
