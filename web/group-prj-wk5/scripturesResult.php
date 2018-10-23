@@ -1,4 +1,5 @@
 <?php 
+ require 'resources.php'
 echo $_POST['book'];
 
 

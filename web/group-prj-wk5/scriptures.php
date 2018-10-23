@@ -39,7 +39,7 @@
                foreach ($topics as $topic) {
            $TopicName = $topic['name'];
 //           $course_code = $ast['courseCode'];
-           echo "<input type=\"checkbox\" name=\"" . $TopicName . "\">" . $TopicName . "<br>";
+           echo "<input type=\"checkbox\" name=\"topic[]\" >" . $TopicName . "<br>";
        }   
         
         
