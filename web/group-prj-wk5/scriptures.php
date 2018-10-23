@@ -36,10 +36,11 @@
         $stmt-> execute();
         $topics = $stmt->fetchAll(PDO::FETCH_ASSOC);
         
-               foreach ($topics as $topic) {
+               foreach ($topics as $index=>$topic) {
            $TopicName = $topic['name'];
+            
 //           $course_code = $ast['courseCode'];
-           echo "<input type=\"checkbox\" name=\"topic[]\" >" . $TopicName . "<br>";
+           echo "<input type=\"checkbox\" name=\"topic[]\" value=\"" . $index .  "\">" . $TopicName . "<br>";
        }   
         
         

@@ -1,6 +1,6 @@
 <?php 
  require 'resources.php'
-echo $_POST['book'];
+echo $_POST['topic'];
 
 
 ?>
