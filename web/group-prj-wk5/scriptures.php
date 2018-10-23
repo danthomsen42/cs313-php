@@ -24,7 +24,7 @@
 
     </form>
 
-    <form>
+    <form action="scripturesResult.php" method="post">
 
         Book: <input type="text" name="book" id="book"> <br>
         Chapter: <input type="text" name="chapter" id="chapter"> <br>
@@ -50,7 +50,7 @@
         ?>
         
         
-        <input type="submit">
+        <input type="submit" >
 
 
 
