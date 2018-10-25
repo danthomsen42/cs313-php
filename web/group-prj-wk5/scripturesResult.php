@@ -1,6 +1,6 @@
 <?php 
  require 'resources.php';
-echo $_POST['topic[]'];
-
-
+$fix = $_POST['topic'];
+$arr = unserialize(base64_decode($fix));
+echo $arr;
 ?>
