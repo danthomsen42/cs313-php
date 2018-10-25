@@ -39,6 +39,7 @@ INSERT INTO assistants(ast_name) VALUES ('William');
 INSERT INTO assistants(ast_name) VALUES ('Brooke');
 INSERT INTO assistants(ast_name) VALUES ('Andrew');
 
+/*
 INSERT INTO assistant_classes(ast_name, course_Code) VALUES
 (1, 2),
 (1, 3),
@@ -47,7 +48,7 @@ INSERT INTO assistant_classes(ast_name, course_Code) VALUES
 (2, 3),
 (3, 1),
 (3, 2);
-
+*/
 SELECT 
 assistants.ast_name,
 classes.course_code
