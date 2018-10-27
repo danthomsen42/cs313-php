@@ -63,9 +63,13 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
 //           $course_code = $ast['courseCode'];
            echo "<li><p>$finished_ast - $finished_cls</p></li>";
        }   
+        
+//        foreach ($astCls as $)
+        
         print_r ($astCls);
         
-        
+        echo astCls[1];
+        echo astCls[4];
           ?>
     </ul>
     
