@@ -53,5 +53,5 @@ SELECT
 assistants.ast_name,
 classes.course_code
 FROM
-assistants
-INNER JOIN assistant_classes ON assistant_classes.ast_name = assistants.ast_name INNER JOIN assistant_classes ON assistant_classes.course_code = classes.course_code;
+assistants, classes, assistant_classes
+WHERE assistant_classes.ast_name = assistants.id and assistant_classes.course_Code = classes.id;
