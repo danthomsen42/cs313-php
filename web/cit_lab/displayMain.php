@@ -51,7 +51,7 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
              $finished_cls = $join['course_code'];
              
              //$assistants[] = $finished_ast;
-            $assistants[] = array_unique($finished_ast);
+            //$assistants[] = array_unique($finished_ast);
              $astCls = array($assistants, $finished_cls);
              
              
