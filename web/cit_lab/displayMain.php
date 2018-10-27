@@ -68,8 +68,8 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
         
         print_r ($astCls);
         
-        echo astCls[1];
-        echo astCls[4];
+        echo astCls[1] . "\n";
+        echo astCls[4] . "\n";
           ?>
     </ul>
     
