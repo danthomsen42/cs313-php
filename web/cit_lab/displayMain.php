@@ -78,12 +78,14 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
             echo "<div> ------------- </div>";
 
         for ($row = 0; $row < $arraySize; $row++){
-            echo '<p><b>Lab Assistant $row</b><p><br>';
+            echo '<p><b>Lab Assistant '.$row.'</b><p><br>';
             for ($col = 0; $col < 2; $col++){
-                if ($astCls[$row][0] == $astCls[$row+=1][0]){
+                if ($astCls[$row][0] === $astCls[$row+=1][0]){
                     $astCls[$row+=1][0] = '-';
                 }
+                else{
                 echo "<div>" .$astCls[$row][$col]."</div>";
+                }
             }
             
             
