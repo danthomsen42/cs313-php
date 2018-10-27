@@ -49,10 +49,11 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
          foreach ($jnd as $join) {
            $finished_ast = $join['ast_name'];
              $finished_cls = $join['course_code'];
-             
+             $i = 0;
+             $i++;
              //$assistants[] = $finished_ast;
             //$assistants[] = array_unique($finished_ast);
-             $astCls = array($finished_ast, $finished_cls);
+             $astCls[i] = array($finished_ast, $finished_cls);
              
              
 //           $course_code = $ast['courseCode'];
