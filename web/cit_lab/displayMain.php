@@ -76,6 +76,9 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
         echo $arraySize; 
         
             echo "<div> ------------- </div>";
+        echo $astCls[2][2];
+        
+        echo "<div> ------------- </div>";
 
         for ($row = 0; $row < $arraySize; $row++){
             echo '<p><b>Lab Assistant '.$row.'</b><p><br>';
