@@ -76,7 +76,7 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
         echo $arraySize; 
         
             echo "<div> ------------- </div>";
-        echo $astCls[2][2];
+        echo $astCls[2][1];
         
         echo "<div> ------------- </div>";
 
