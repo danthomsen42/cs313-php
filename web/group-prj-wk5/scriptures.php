@@ -40,7 +40,7 @@
            $TopicName = $topic['name'];
             
 //           $course_code = $ast['courseCode'];
-           echo "<input type=\"checkbox\" name=\"topic[]\" value=\"" . base64_encode(serialize($index)) .  "\">" . $TopicName . "<br>";
+           echo "<input type=\"checkbox\" name=\"topic\" value=\"" . base64_encode(serialize($index)) .  "\">" . $TopicName . "<br>";
        }   
         
         
