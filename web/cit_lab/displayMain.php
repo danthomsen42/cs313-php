@@ -34,7 +34,7 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
            echo "<li><p>$id () $classcode</p></li>";
 //           var_dump($class);
        } 
-        
+        $i = 0;
         echo "<div> ------------- </div>";
        foreach ($ast as $assist) {
            $assistant_name = $assist['ast_name'];
@@ -49,7 +49,7 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
          foreach ($jnd as $join) {
            $finished_ast = $join['ast_name'];
              $finished_cls = $join['course_code'];
-             $i = 0;
+             
              $i++;
              //$assistants[] = $finished_ast;
             //$assistants[] = array_unique($finished_ast);
