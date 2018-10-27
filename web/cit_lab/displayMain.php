@@ -35,19 +35,31 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
 //           var_dump($class);
        } 
         
-        
+        echo "<div> ------------- </div>";
        foreach ($ast as $assist) {
            $assistant_name = $assist['ast_name'];
 //           $course_code = $ast['courseCode'];
            echo "<li><p>$assistant_name</p></li>";
        }   
         
+        echo "<div> ------------- </div>";
+        $assistants = array();
+        $classes = array();    
+        //$astCls = array();
          foreach ($jnd as $join) {
            $finished_ast = $join['ast_name'];
              $finished_cls = $join['course_code'];
+             
+             //$assistants[] = $finished_ast;
+            $assistants[] = array_unique($finished_ast);
+             $astCls = array($assistants, $finished_cls)
+             
+             
 //           $course_code = $ast['courseCode'];
            echo "<li><p>$finished_ast - $finished_cls</p></li>";
        }   
+        echo $astCls;
+        
         
           ?>
     </ul>
