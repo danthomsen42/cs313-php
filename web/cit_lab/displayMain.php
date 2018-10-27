@@ -70,7 +70,7 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
         
         echo "<div> ------------- </div>";
         
-        echo count($astCls)
+        echo count($astCls);
         
             echo "<div> ------------- </div>";
         echo $astCls[1] . "\n";
