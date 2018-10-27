@@ -43,10 +43,10 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
        }   
         
          foreach ($jnd as $join) {
-           $finished = $join['ast_name'];
-             $finished = $join['course_code'];
+           $finished_ast = $join['ast_name'];
+             $finished_cls = $join['course_code'];
 //           $course_code = $ast['courseCode'];
-           echo "<li><p>$finished</p></li>";
+           echo "<li><p>$finished_ast - $finished_cls</p></li>";
        }   
         
           ?>
