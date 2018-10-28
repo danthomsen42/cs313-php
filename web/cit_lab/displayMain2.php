@@ -92,6 +92,7 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
 //                }
 //                else{
                 echo '<div>' .$astCls[$row][$col].'</div>';
+                 print_r '<div>' .$astCls[$row][$col].'</div>';
 //                }
             }
             
