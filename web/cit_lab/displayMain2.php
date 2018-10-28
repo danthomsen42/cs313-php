@@ -79,13 +79,17 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
         
             echo "<div> ------------- </div>";
         print_r ($arrayToo[1][1]);
-        echo $arrayToo[1][1];
+        echo $arrayToo[0][0].'<br>';
+        echo $arrayToo[0][1].'<br>';
+        echo $arrayToo[0][2].'<br>';
+        echo $arrayToo[1][0].'<br>';
+        echo $arrayToo[1][1].'<br>';
+        echo $arrayToo[2][0].'<br>';
+        echo $arrayToo[2][1].'<br>';
         
         
         
-        
-        
-        print_r ($astCls);
+       // print_r ($astCls);
                 
 //        print_r(array_values($astCls));
         
@@ -94,13 +98,13 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
         for ($row = 0; $row < $arraySize; $row++){
             echo '<p><b>Lab Assistant '.$row.'</b><p><br>';
             for ($col = 0; $col < 2; $col++){
-                if ($arrayToo[$row][0] === $astCls[$row+=1][0]){
-                    $arrayToo[$row+=1][0] = '-';
-                }
-                else{
+//                if ($arrayToo[$row][0] === $astCls[$row+=1][0]){
+//                    $arrayToo[$row+=1][0] = '-';
+//                }
+//                else{
                 echo '<div>' .$arrayToo[$row][$col].'</div>';
 //                 print_r '<div>' .$astCls[$row][$col].'</div>';
-                }
+//                }
             }
             
             
