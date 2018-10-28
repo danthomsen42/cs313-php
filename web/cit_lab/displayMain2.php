@@ -79,13 +79,13 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
         
             echo "<div> ------------- </div>";
         print_r ($arrayToo[1][1]);
-        echo $arrayToo[0][0].'<br>';
-        echo $arrayToo[0][1].'<br>';
-        echo $arrayToo[0][2].'<br>';
-        echo $arrayToo[1][0].'<br>';
-        echo $arrayToo[1][1].'<br>';
-        echo $arrayToo[2][0].'<br>';
-        echo $arrayToo[2][1].'<br>';
+        echo $arrayToo[0][0].'<br> 1';
+        echo $arrayToo[0][1].'<br> 2';
+        echo $arrayToo[0][2].'<br> 3';
+        echo $arrayToo[1][0].'<br> 4';
+        echo $arrayToo[1][1].'<br> 5';
+        echo $arrayToo[2][0].'<br> 6';
+        echo $arrayToo[2][1].'<br> 7';
         
         
         
