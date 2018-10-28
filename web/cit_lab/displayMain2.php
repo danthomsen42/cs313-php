@@ -80,7 +80,7 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
         
         print_r ($astCls);
                 
-        print_r(array_values($astCls))
+        print_r(array_values($astCls));
         
         echo "<div> ------------- </div>";
 
