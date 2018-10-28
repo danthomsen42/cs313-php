@@ -77,6 +77,8 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
         
             echo "<div> ------------- </div>";
         print_r ($astCls[2][1]);
+        
+        print_r ($astCls);
                 
         print_r(array_values($astCls))
         
