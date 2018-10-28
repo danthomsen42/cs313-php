@@ -59,6 +59,8 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
              
 //               $astCls[$i] = array('id'=>$i, 'assistant'=>$finished_ast, 'class'=>$finished_cls);
              $astCls[$i] = array('assistant'=>$finished_ast, 'class'=>$finished_cls);
+             $arrayToo[$i] = array($finished_ast, $finished_cls);
+             
              
              
 //           $course_code = $ast['courseCode'];
@@ -76,8 +78,8 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
         echo $arraySize; 
         
             echo "<div> ------------- </div>";
-        print_r ($astCls[1][1]);
-        echo $astCls[1][1];
+        print_r ($arrayToo[1][1]);
+        echo $arrayToo[1][1];
         print_r ($astCls);
                 
 //        print_r(array_values($astCls));
@@ -92,7 +94,7 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
 //                }
 //                else{
                 echo '<div>' .$astCls[$row][$col].'</div>';
-                 print_r '<div>' .$astCls[$row][$col].'</div>';
+//                 print_r '<div>' .$astCls[$row][$col].'</div>';
 //                }
             }
             
