@@ -95,9 +95,9 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
         
         echo "<div> ------------- </div>";
 
-        for ($row = 0; $row < $arraySize; $row++){
+        for ($row = 0; $row <= $arraySize; $row++){
             echo '<p><b>Lab Assistant '.$row.'</b><p><br>';
-            for ($col = 0; $col < 2; $col++){
+            for ($col = 0; $col < 3; $col++){
 //                if ($arrayToo[$row][0] === $astCls[$row+=1][0]){
 //                    $arrayToo[$row+=1][0] = '-';
 //                }
