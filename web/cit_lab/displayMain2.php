@@ -67,7 +67,7 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
         
 //        foreach ($astCls as $)
         
-        #print_r ($astCls);
+//        print_r ($astCls);
         
         echo "<div> ------------- </div>";
         
