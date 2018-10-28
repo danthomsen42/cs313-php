@@ -80,6 +80,11 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
             echo "<div> ------------- </div>";
         print_r ($arrayToo[1][1]);
         echo $arrayToo[1][1];
+        
+        
+        
+        
+        
         print_r ($astCls);
                 
 //        print_r(array_values($astCls));
@@ -93,7 +98,7 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
 //                    $astCls[$row+=1][0] = '-';
 //                }
 //                else{
-                echo '<div>' .$astCls[$row][$col].'</div>';
+                echo '<div>' .$arrayToo[$row][$col].'</div>';
 //                 print_r '<div>' .$astCls[$row][$col].'</div>';
 //                }
             }
