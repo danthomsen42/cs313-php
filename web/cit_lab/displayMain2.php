@@ -94,13 +94,13 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
         for ($row = 0; $row < $arraySize; $row++){
             echo '<p><b>Lab Assistant '.$row.'</b><p><br>';
             for ($col = 0; $col < 2; $col++){
-//                if ($astCls[$row][0] === $astCls[$row+=1][0]){
-//                    $astCls[$row+=1][0] = '-';
-//                }
-//                else{
+                if ($arrayToo[$row][0] === $astCls[$row+=1][0]){
+                    $arrayToo[$row+=1][0] = '-';
+                }
+                else{
                 echo '<div>' .$arrayToo[$row][$col].'</div>';
 //                 print_r '<div>' .$astCls[$row][$col].'</div>';
-//                }
+                }
             }
             
             
