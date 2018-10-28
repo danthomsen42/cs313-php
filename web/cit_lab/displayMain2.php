@@ -81,12 +81,19 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
 //        print_r ($arrayToo[1][1]);
         echo $arrayToo[1][0].'-1<br> ';
         echo $arrayToo[1][1].'-2<br> ';
-        echo $arrayToo[1][2].'-3<br> ';
-        echo $arrayToo[2][0].'-4<br> ';
-        echo $arrayToo[2][1].'-5<br> ';
-        echo $arrayToo[3][0].'-6<br> ';
-        echo $arrayToo[3][1].'-7<br>';
-        
+//        echo $arrayToo[1][2].'-3<br> ';
+        echo $arrayToo[2][0].'-3<br> ';
+        echo $arrayToo[2][1].'-4<br> ';
+        echo $arrayToo[3][0].'-5<br> ';
+        echo $arrayToo[3][1].'-6<br>';
+        echo $arrayToo[4][0].'-6<br>';
+        echo $arrayToo[4][1].'-6<br>';
+        echo $arrayToo[5][0].'-6<br>';
+        echo $arrayToo[5][1].'-6<br>';
+        echo $arrayToo[6][0].'-6<br>';
+        echo $arrayToo[6][1].'-6<br>';
+        echo $arrayToo[7][0].'-6<br>';
+        echo $arrayToo[7][1].'-6<br>';
         
         
        // print_r ($astCls);
