@@ -95,6 +95,9 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
         echo $arrayToo[7][1].' -14<br>';
         
         
+        
+        
+        
        // print_r ($astCls);
                 
 //        print_r(array_values($astCls));
@@ -120,6 +123,15 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
         
           ?>
     </ul>
+    
+    <form>
+    
+    
+    
+    </form>
+    
+    
+    
     
     </body>
 
