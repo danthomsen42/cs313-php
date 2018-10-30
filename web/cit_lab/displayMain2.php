@@ -119,6 +119,8 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
             
         }
         
+       
+        
         
         
           ?>
@@ -126,7 +128,16 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
     
     <form>
     
-    
+    <?php 
+        //http://www.postgresqltutorial.com/postgresql-php/insert/
+        public function insertData($student_name, $classCode){
+            $sql = 'INSERT INTO students(studentName, courseCode) VALUES(:studentName, :courseCode)';
+            $stmt = $this->pdo->prepare($sql);
+            
+            $stmt->
+        }
+        
+        ?>
     
     </form>
     
