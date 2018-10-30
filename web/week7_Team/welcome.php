@@ -12,6 +12,8 @@
     $statement = $db->prepare("INSERT INTO loginUserTeamWeekSeven (username, password) VALUES (:usr, :passwordHash);");
     $statement->execute();
     
+    echo $statement;
+    
         ?>  
     
     
