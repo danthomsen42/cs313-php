@@ -10,12 +10,12 @@
     $usr = $_POST["username"];    
         $passwordHash = password_hash($pas, PASSWORD_DEFAULT);
         
-    $statement = $db->prepare("INSERT INTO loginUserTeamWeekSeven (username, password) VALUES (:usr, :passwordHash);");
+    $statement = $db->prepare("INSERT INTO loginUserTeamWeekSeven (username, password) VALUES (" .$usr.",". $passwordHash.");");
     $statement->execute();
     
     
-    $echo $pas;
-    $echo $usr;
+//    $echo $pas;
+    echo $usr;
         
     
    // echo $statement;
