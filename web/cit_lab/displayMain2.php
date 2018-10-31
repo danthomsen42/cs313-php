@@ -38,15 +38,15 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
             <?php
         
         
-        
-    echo '<select>';
+       echo '<form method="POST" action="displayMain2.php">';   
+    echo '<select name="courseCode">';
         
         
        foreach ($cls as $class) {
            $classcode = $class['course_code'];
            $id = $class['id'];
 //           $course_code = $ast['courseCode'];
-           echo '<option value='.$classcode.'>'.$classcode.'</option>';
+           echo '<option value='.$id.'>'.$classcode.'</option>';
 //           var_dump($class);
            
            
@@ -59,7 +59,8 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
         
      if  (isset($_POST["StudentName"])){ 
          $StName = $_POST["StudentName"];
-        $student = $db->prepare('INSERT INTO students (studentName, course_code, enter_time) VALUES (\''.$StName.'\', 2, now());');
+         $CourseNum = $_POST["courseCode"];
+        $student = $db->prepare('INSERT INTO students (studentName, course_code, enter_time) VALUES (\''.$StName.'\','.$CourseNum. ', now());');
         try {
          $student->execute();
         }
@@ -70,7 +71,7 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
         
         
         
-    echo '<form method="POST" action="displayMain2.php">';    
+      
     echo '<input type="text" name="StudentName">';
         
     echo '<input type="submit" value="Submit">';    
