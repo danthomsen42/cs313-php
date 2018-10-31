@@ -6,6 +6,9 @@ require('dbConnect.php');
 $stmt = $db->prepare('SELECT id, ast_name FROM assistants');
 $meh = $db->prepare('SELECT id, course_code FROM classes');
 $joined = $db->prepare('SELECT assistants.ast_name, classes.course_code FROM assistants, classes, assistant_classes WHERE assistant_classes.ast_name = assistants.id and assistant_classes.course_Code = classes.id');
+
+
+
 $stmt-> execute();
 $meh-> execute();
 $joined-> execute();
@@ -30,6 +33,8 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
     <ul>
     <?php
         
+        
+        
     echo '<select>';
         
         
@@ -43,6 +48,24 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
            
            
        } 
+        
+     
+        echo '</select>';
+   
+        
+     if  (isset($_POST["StudentName"])){ 
+         $StName = $_POST["StudentName"];
+        $student = $db->prepare('INSERT INTO student(studentName, course_code, enter-time) VALUES ('.$StName.', 2, now());');
+         $student->execute();
+    }  
+        
+        
+        
+    echo '<form method="POST" action="displayMain2.php">';    
+    echo '<input type="text" name="StudentName">';
+        
+    echo '<input type="submit" value="Submit">';    
+    echo '</form>';
         
         
         
