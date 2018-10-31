@@ -25,15 +25,28 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
 <body>
     <header><h2>Assistants and Classes</h2></header>
     
+    
+    
     <ul>
     <?php
+        
+    echo '<select>';
+        
+        
        foreach ($cls as $class) {
            $classcode = $class['course_code'];
            $id = $class['id'];
 //           $course_code = $ast['courseCode'];
-           echo "<li><p>$classcode</p></li>";
+           echo '<option value='.$classcode.'>'.$classcode.'</option>';
 //           var_dump($class);
+           
+           
+           
        } 
+        
+        
+        
+        
         $i = 0;
         echo "<div> ------------- </div>";
        foreach ($ast as $assist) {
