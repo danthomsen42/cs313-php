@@ -19,19 +19,23 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
 // go through each movie in th eresult and display it
 
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-    
-    
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+
+
     </head>
-<body>
-    <header><h2>Assistants and Classes</h2></header>
-    
-    
-    
-    <ul>
-    <?php
+
+    <body>
+        <header>
+            <h2>Assistants and Classes</h2>
+        </header>
+
+
+
+        <ul>
+            <?php
         
         
         
@@ -55,7 +59,7 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
         
      if  (isset($_POST["StudentName"])){ 
          $StName = $_POST["StudentName"];
-        $student = $db->prepare('INSERT INTO student(studentName, course_code, enter-time) VALUES ('.$StName.', 2, now());');
+        $student = $db->prepare('INSERT INTO students(studentName, course_code, enter-time) VALUES ('.$StName.', 2, now());');
         try {
          $student->execute();
         }
@@ -165,11 +169,11 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
         
         
           ?>
-    </ul>
-    
-    <form>
-    
-    <?php 
+        </ul>
+
+        <form>
+
+            <?php 
         //http://www.postgresqltutorial.com/postgresql-php/insert/
     //    public function insertData($student_name, $classCode){
       //      $sql = 'INSERT INTO students(studentName, courseCode) VALUES(:studentName, :courseCode)';
@@ -179,13 +183,13 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
      //   }
         
         ?>
-    
-    </form>
-    
-    
-    
-    
+
+        </form>
+
+
+
+
     </body>
 
 
-</html>
+    </html>
