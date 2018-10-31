@@ -31,7 +31,7 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
            $classcode = $class['course_code'];
            $id = $class['id'];
 //           $course_code = $ast['courseCode'];
-           echo "<li><p>$id () $classcode</p></li>";
+           echo "<li><p>$classcode</p></li>";
 //           var_dump($class);
        } 
         $i = 0;
