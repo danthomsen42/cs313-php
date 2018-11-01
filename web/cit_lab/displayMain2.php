@@ -57,10 +57,11 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
         echo '</select>';
    
         
-     if  (isset($_POST["StudentName"])){ 
-         $StName = $_POST["StudentName"];
+     if  (isset($_POST["StudentFirstName"]) && isset($_POST["StudentLastName"])){ 
+         $StFirstName = $_POST["StudentFirstName"];
+         $StLastName = $_POST["StudentLastName"];
          $CourseNum = $_POST["courseCode"];
-        $student = $db->prepare('INSERT INTO students (student_name, course_code, enter_time) VALUES (\''.$StName.'\','.$CourseNum. ', now());');
+        $student = $db->prepare('INSERT INTO students (student_first_name, student_last_name, course_code, enter_time) VALUES (\''.$StFirstName.'\',\''.$StLastName.'\','.$CourseNum. ', now());');
         try {
          $student->execute();
         }
@@ -72,7 +73,8 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
         
         
       
-    echo '<input type="text" name="StudentName">';
+    echo '<input type="text" name="StudentFirstName">';
+    echo '<input type="text" name="StudentLastName">';        
         
     echo '<input type="submit" value="Submit">';    
     echo '</form>';
