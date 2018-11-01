@@ -51,6 +51,16 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
                     <th>Lab Assistant</th>
                     <th>Minutes in Queue</th>
                 </tr>
+                <tr>
+                    <td>Bobby</td>
+                    <td>Filler</td>
+                    <td>This is a comment</td>
+                    <td>I'm also a filler</td>
+                    <th>Like 2 minutes ish?</th>
+                
+                
+                </tr>
+                
 <!--                    <td></td>-->
 
             </table>
