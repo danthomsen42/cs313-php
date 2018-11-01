@@ -42,7 +42,7 @@ $StLst = $StudentList->fetchAll(PDO::FETCH_ASSOC);
             <?php
         
         
-       echo '<form method="POST" action="displayMain2.php">';   
+       echo '<form method="POST" action="displayMain3.php">';   
     echo '<select name="courseCode">';
         
         
