@@ -56,13 +56,22 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
      
         echo '</select>';
    
+            
+            
+    echo '</br>';
+            
+    echo '<h3>Not on the list? Sign up down below to be added to the list. </h3>';        
         
+            
+            
      if  (isset($_POST["StudentFirstName"]) && isset($_POST["StudentLastName"]) && isset($_POST["INumber"])){ 
          $StFirstName = $_POST["StudentFirstName"];
          $StLastName = $_POST["StudentLastName"];
          $StINumber = $_POST["INumber"];
          $CourseNum = $_POST["courseCode"];
         $student = $db->prepare('INSERT INTO students (student_first_name, student_last_name, i_number) VALUES (\''.$StFirstName.'\',\''.$StLastName.'\',\''.$StINumber.'\');');
+       // $queue = $db->prepare('INSERT INTO queue()') 
+         
         try {
          $student->execute();
         }
@@ -89,9 +98,9 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
         */  
             
       
-    echo '<input type="text" name="StudentFirstName">';
-    echo '<input type="text" name="StudentLastName">'; 
-    echo '<input type="text" name="INumber">';         
+    echo '<input type="text" name="StudentFirstName" placeholder="First name">>';
+    echo '<input type="text" name="StudentLastName" placeholder="Last name">'; 
+    echo '<input type="text" name="INumber" placeholder="I-Number">';         
         
     echo '<input type="submit" value="Submit">';    
     echo '</form>';
