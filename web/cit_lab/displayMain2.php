@@ -76,7 +76,7 @@ $StLst = $StudentList->fetchAll(PDO::FETCH_ASSOC);
             echo '</br>';
             echo '</br>';
             echo '</br>';
-            echo '</br><textarea cols=40 rows=3 placeholder="Notes"></textarea>';
+            echo '</br><p><textarea cols=40 rows=3 placeholder="Notes"></textarea></p>';
               echo '</br>';
             
        echo '</select>';  
