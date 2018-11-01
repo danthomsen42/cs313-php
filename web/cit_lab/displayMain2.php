@@ -62,7 +62,7 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
          $StLastName = $_POST["StudentLastName"];
          $StINumber = $_POST["INumber"];
          $CourseNum = $_POST["courseCode"];
-        $student = $db->prepare('INSERT INTO students (student_first_name, student_last_name, i_number) VALUES (\''.$StFirstName.'\',\''.$StLastName.'\','.$StINumber.'\');');
+        $student = $db->prepare('INSERT INTO students (student_first_name, student_last_name, i_number) VALUES (\''.$StFirstName.'\',\''.$StLastName.'\',\''.$StINumber.'\');');
         try {
          $student->execute();
         }
