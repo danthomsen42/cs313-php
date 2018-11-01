@@ -44,7 +44,7 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
 <!--        <ul>-->
 
             <table name="StudentQueue" style="width:100%">
-                <tr>
+                <tr style="color: white; background-color: orange;">
                     <th>Student Name</th>
                     <th>Course</th>
                     <th>Comments</th>
