@@ -42,6 +42,21 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
 
 
         <ul>
+
+            <table name="StudentQueue">
+                <tr>
+                    <th>Student Name</th>
+                    <th>Course</th>
+                    <th>Comments</th>
+                    <th>Lab Assistant</th>
+                    <th>Minutes in Queue</th>
+                </tr>
+                    <td></td>
+
+            </table>
+
+
+
             <?php
         
         
