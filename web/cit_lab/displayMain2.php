@@ -78,7 +78,7 @@ $StLst = $StudentList->fetchAll(PDO::FETCH_ASSOC);
        echo '</select>';  
             
     echo '</br>';
-            
+    echo '</br>';        
     echo '<h3>Not on the list? Sign up down below to be added to the list. </h3>';        
         
             
