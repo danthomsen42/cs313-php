@@ -57,11 +57,12 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
         echo '</select>';
    
         
-     if  (isset($_POST["StudentFirstName"]) && isset($_POST["StudentLastName"])){ 
+     if  (isset($_POST["StudentFirstName"]) && isset($_POST["StudentLastName"]) && isset($_POST["INumber"])){ 
          $StFirstName = $_POST["StudentFirstName"];
          $StLastName = $_POST["StudentLastName"];
+         $StINumber = $_POST["INumber"];
          $CourseNum = $_POST["courseCode"];
-        $student = $db->prepare('INSERT INTO students (student_first_name, student_last_name, course_code, enter_time) VALUES (\''.$StFirstName.'\',\''.$StLastName.'\','.$CourseNum. ', now());');
+        $student = $db->prepare('INSERT INTO students (student_first_name, student_last_name, i_number) VALUES (\''.$StFirstName.'\',\''.$StLastName.'\','.$StINumber.'\';');
         try {
          $student->execute();
         }
@@ -71,10 +72,26 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
         }  
         
         
-        
+        /*    
+               if  (isset($_POST["StudentFirstName"]) && isset($_POST["StudentLastName"]) && isset($_POST["INumber"])){ 
+         $StFirstName = $_POST["StudentFirstName"];
+         $StLastName = $_POST["StudentLastName"];
+         $StINumber = $_POST["INumber"];
+         $CourseNum = $_POST["courseCode"];
+        $student = $db->prepare('INSERT INTO students (student_first_name, student_last_name, course_code, enter_time) VALUES (\''.$StFirstName.'\',\''.$StLastName.'\','.$CourseNum. ', now());');
+        try {
+         $student->execute();
+        }
+         catch(Exception $e){
+            echo $e;
+         }
+        }  
+        */  
+            
       
     echo '<input type="text" name="StudentFirstName">';
-    echo '<input type="text" name="StudentLastName">';        
+    echo '<input type="text" name="StudentLastName">'; 
+    echo '<input type="text" name="INumber">';         
         
     echo '<input type="submit" value="Submit">';    
     echo '</form>';
