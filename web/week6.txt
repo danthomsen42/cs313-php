@@ -1,0 +1,39 @@
+After completing the assignment, please answer the questions in this text file and submit it to I-Learn.
+
+1. Copy and paste the URL for your web application:
+
+https://radiant-gorge-54637.herokuapp.com/cit_lab/displayMain3.php
+
+2. Copy and paste the URL for your source code repository (e.g., GitHub):
+
+https://github.com/danthomsen42/cs313-php
+
+3. Briefly list and describe the elements of the application that are functioning. Include any special instructions about how to login and/or use your application.
+
+This retrieves and inserts data as intended for most of the information. There is no special login information.
+
+4. Briefly describe any pieces of the assignment that are not yet working correctly.
+
+It works well as necessary for basic imput and output, but the queue table isn't quiet ready. It should be done here shortly.
+
+5. Briefly describe the "coolest" thing you learned while completing this assignment.
+
+I basically learned how to actually use the database as necessary.
+
+6. What is a benefit of having a foreign key constraint?
+
+A foreign key is used to keep data in unique tables but use this data as necessary amongst the other tables for the sake of organization and security.
+
+7. Please select the category you feel best describes your assignment:
+A - Some attempt was made
+B - Developing, but significantly deficient
+C - Slightly deficient, but still mostly adequate
+D - Meets requirements
+E - Shows creativity and excels above and beyond requirements
+
+C
+
+8. Provide a brief justification (1-2 sentences) for selecting that category.
+
+I would say C, as it technically meets most of the requirements, but it is missing the main queue, which should just be contained partially in a queue table and mostly in a session variable.
+

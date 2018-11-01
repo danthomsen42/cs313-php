@@ -9,17 +9,20 @@ $joined = $db->prepare('SELECT assistants.ast_name, classes.course_code FROM ass
 
 $StudentList = $db->prepare('SELECT id, student_first_name, student_last_name FROM students');
 
-//$QueueInfo = $db->prepare('SELECT id, ')
+$QueueInfo = $db->prepare('SELECT id, student_name, course_code, ast_name, enter_time, start_time, end_time FROM queue');
 
 $stmt-> execute();
 $courses-> execute();
 $joined-> execute();
 $StudentList-> execute();
+$QueueInfo-> execute();
+
 
 $ast = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $cls = $courses->fetchAll(PDO::FETCH_ASSOC);
 $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
 $StLst = $StudentList->fetchAll(PDO::FETCH_ASSOC);
+$Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
 // go through each movie in th eresult and display it
 
 ?>
@@ -140,64 +143,64 @@ $StLst = $StudentList->fetchAll(PDO::FETCH_ASSOC);
         
         $i = 0;
         echo "<div> ------------- </div>";
-       foreach ($ast as $assist) {
-           $assistant_name = $assist['ast_name'];
-//           $course_code = $ast['courseCode'];
-           echo "<li><p>$assistant_name</p></li>";
-       }   
-        
-        echo "<div> ------------- </div>";
-        $assistants = array();
-        $classes = array();    
-        //$astCls = array();
-         foreach ($jnd as $join) {
-           $finished_ast = $join['ast_name'];
-             $finished_cls = $join['course_code'];
-             
-             $i++;
-             //$assistants[] = $finished_ast;
-            //$assistants[] = array_unique($finished_ast);
-//             $astCls[$i] = array(
-//                 array('id'=>$i, 'assistant'=>$finished_ast, 'class'=>$finished_cls)
-//             );
-             
-//               $astCls[$i] = array('id'=>$i, 'assistant'=>$finished_ast, 'class'=>$finished_cls);
-             $astCls[$i] = array('assistant'=>$finished_ast, 'class'=>$finished_cls);
-             $arrayToo[$i] = array($finished_ast, $finished_cls);
-             
-             
-             
-//           $course_code = $ast['courseCode'];
-           echo "<li><p>$finished_ast - $finished_cls</p></li>";
-       }   
+//       foreach ($ast as $assist) {
+//           $assistant_name = $assist['ast_name'];
+////           $course_code = $ast['courseCode'];
+//           echo "<li><p>$assistant_name</p></li>";
+//       }   
+//        
+//        echo "<div> ------------- </div>";
+//        $assistants = array();
+//        $classes = array();    
+//        //$astCls = array();
+//         foreach ($jnd as $join) {
+//           $finished_ast = $join['ast_name'];
+//             $finished_cls = $join['course_code'];
+//             
+//             $i++;
+//             //$assistants[] = $finished_ast;
+//            //$assistants[] = array_unique($finished_ast);
+////             $astCls[$i] = array(
+////                 array('id'=>$i, 'assistant'=>$finished_ast, 'class'=>$finished_cls)
+////             );
+//             
+////               $astCls[$i] = array('id'=>$i, 'assistant'=>$finished_ast, 'class'=>$finished_cls);
+//             $astCls[$i] = array('assistant'=>$finished_ast, 'class'=>$finished_cls);
+//             $arrayToo[$i] = array($finished_ast, $finished_cls);
+//             
+//             
+//             
+////           $course_code = $ast['courseCode'];
+//           echo "<li><p>$finished_ast - $finished_cls</p></li>";
+//       }   
         
 //        foreach ($astCls as $)
         
 //        print_r ($astCls);
         
-        echo "<div> ------------- </div>";
-        
-        $arraySize = count($astCls);
-        
-        echo $arraySize; 
-        
-            echo "<div> ------------- </div>";
-//        print_r ($arrayToo[1][1]);
-        echo $arrayToo[1][0].' -1<br> ';
-        echo $arrayToo[1][1].' -2<br> ';
-        echo $arrayToo[2][0].' -3<br> ';
-        echo $arrayToo[2][1].' -4<br> ';
-        echo $arrayToo[3][0].' -5<br> ';
-        echo $arrayToo[3][1].' -6<br>';
-        echo $arrayToo[4][0].' -7<br>';
-        echo $arrayToo[4][1].' -8<br>';
-        echo $arrayToo[5][0].' -9<br>';
-        echo $arrayToo[5][1].' -10<br>';
-        echo $arrayToo[6][0].' -11<br>';
-        echo $arrayToo[6][1].' -12<br>';
-        echo $arrayToo[7][0].' -13<br>';
-        echo $arrayToo[7][1].' -14<br>';
-        
+//        echo "<div> ------------- </div>";
+//        
+//        $arraySize = count($astCls);
+//        
+//        echo $arraySize; 
+//        
+//            echo "<div> ------------- </div>";
+////        print_r ($arrayToo[1][1]);
+//        echo $arrayToo[1][0].' -1<br> ';
+//        echo $arrayToo[1][1].' -2<br> ';
+//        echo $arrayToo[2][0].' -3<br> ';
+//        echo $arrayToo[2][1].' -4<br> ';
+//        echo $arrayToo[3][0].' -5<br> ';
+//        echo $arrayToo[3][1].' -6<br>';
+//        echo $arrayToo[4][0].' -7<br>';
+//        echo $arrayToo[4][1].' -8<br>';
+//        echo $arrayToo[5][0].' -9<br>';
+//        echo $arrayToo[5][1].' -10<br>';
+//        echo $arrayToo[6][0].' -11<br>';
+//        echo $arrayToo[6][1].' -12<br>';
+//        echo $arrayToo[7][0].' -13<br>';
+//        echo $arrayToo[7][1].' -14<br>';
+//        
         
         
         
@@ -206,24 +209,24 @@ $StLst = $StudentList->fetchAll(PDO::FETCH_ASSOC);
                 
 //        print_r(array_values($astCls));
         
-        echo "<div> ------------- </div>";
-
-        for ($row = 1; $row <= $arraySize; $row++){
-            echo '<p><b>Lab Assistant '.$row.'</b><p><br>';
-            for ($col = 0; $col < 2; $col++){
-                if ($arrayToo[$row][0] == $astCls[$row+1][0]){
-                    $arrayToo[$row+1][0] = ' ';
-                }
-                else{
-                echo '<div>' .$arrayToo[$row][$col].'</div>';
-//                 print_r '<div>' .$astCls[$row][$col].'</div>';
-                }
-            }
-            
-            
-        }
-        
-       
+//        echo "<div> ------------- </div>";
+//
+//        for ($row = 1; $row <= $arraySize; $row++){
+//            echo '<p><b>Lab Assistant '.$row.'</b><p><br>';
+//            for ($col = 0; $col < 2; $col++){
+//                if ($arrayToo[$row][0] == $astCls[$row+1][0]){
+//                    $arrayToo[$row+1][0] = ' ';
+//                }
+//                else{
+//                echo '<div>' .$arrayToo[$row][$col].'</div>';
+////                 print_r '<div>' .$astCls[$row][$col].'</div>';
+//                }
+//            }
+//            
+//            
+//        }
+//        
+//       
         
         
         
