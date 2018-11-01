@@ -57,7 +57,7 @@ $StLst = $StudentList->fetchAll(PDO::FETCH_ASSOC);
      
         echo '</select>';
     echo '</br>'; 
-  
+       echo '</br>';
         echo '<select name="StudentName">';  
    
                    foreach ($StLst as $ListOfStudents) {
@@ -73,12 +73,14 @@ $StLst = $StudentList->fetchAll(PDO::FETCH_ASSOC);
               echo '</br>'; 
              echo '</br>';
 
-            echo '<p>Notes:</p></br>';
+      
           
               echo '</br>';
             
        echo '</select>';  
-              echo '</br><textarea cols=40 rows=3 placeholder="Notes"></textarea>';
+                 echo '</br>';
+                  echo '<p>Notes:</p>';
+              echo '<textarea cols=40 rows=3 placeholder="Notes"></textarea>';
     echo '</br>';
          
     echo '<h3>Not on the list? Sign up down below to be added to the list. </h3>';        
