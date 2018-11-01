@@ -63,10 +63,11 @@ $StLst = $StudentList->fetchAll(PDO::FETCH_ASSOC);
         echo '<select name="StudentName">';  
    
                    foreach ($StLst as $ListOfStudents) {
-           $ListStu = $ListOfStudents['student_first_name'];
+           $FirstName = $ListOfStudents['student_first_name'];
+           $LastName = $ListOfStudents['student_last_name']; 
            $id = $ListOfStudents['id'];
 //           $course_code = $ast['courseCode'];
-           echo '<option value='.$id.'>'.$ListStu.'</option>';
+           echo '<option value='.$id.'>'.$FirstName.' '.$LastName. '</option>';
 //           var_dump($class);
            
            
@@ -115,7 +116,7 @@ $StLst = $StudentList->fetchAll(PDO::FETCH_ASSOC);
         */  
             
       
-    echo '<input type="text" name="StudentFirstName" placeholder="First name">>';
+    echo '<input type="text" name="StudentFirstName" placeholder="First name">';
     echo '<input type="text" name="StudentLastName" placeholder="Last name">'; 
     echo '<input type="text" name="INumber" placeholder="I-Number">';         
         
