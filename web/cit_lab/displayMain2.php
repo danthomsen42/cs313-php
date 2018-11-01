@@ -4,18 +4,21 @@ require('dbConnect.php');
 //$db = get_db();
 //query for all movies
 $stmt = $db->prepare('SELECT id, ast_name FROM assistants');
-$meh = $db->prepare('SELECT id, course_code FROM classes');
+$courses = $db->prepare('SELECT id, course_code FROM classes');
 $joined = $db->prepare('SELECT assistants.ast_name, classes.course_code FROM assistants, classes, assistant_classes WHERE assistant_classes.ast_name = assistants.id and assistant_classes.course_Code = classes.id');
 
+$StudentList = $db->prepare('SELECT id, student_first_name, student_last_name FROM students');
 
 
 $stmt-> execute();
-$meh-> execute();
+$courses-> execute();
 $joined-> execute();
+$StudentList-> execute();
 
 $ast = $stmt->fetchAll(PDO::FETCH_ASSOC);
-$cls = $meh->fetchAll(PDO::FETCH_ASSOC);
+$cls = $courses->fetchAll(PDO::FETCH_ASSOC);
 $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
+$StLst = $StudentList->fetchAll(PDO::FETCH_ASSOC);
 // go through each movie in th eresult and display it
 
 ?>
@@ -56,7 +59,21 @@ $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
      
         echo '</select>';
    
+  
+        echo '<select name="StudentName">';  
+   
+                   foreach ($StLst as $ListOfStudents) {
+           $ListStu = $ListOfStudents['student_first_name'];
+           $id = $ListOfStudents['id'];
+//           $course_code = $ast['courseCode'];
+           echo '<option value='.$id.'>'.$ListStu.'</option>';
+//           var_dump($class);
+           
+           
+           
+       } 
             
+       echo '</select>';  
             
     echo '</br>';
             
