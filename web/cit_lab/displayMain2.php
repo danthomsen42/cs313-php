@@ -58,7 +58,7 @@ $StLst = $StudentList->fetchAll(PDO::FETCH_ASSOC);
         
      
         echo '</select>';
-   
+    echo '</br>'; 
   
         echo '<select name="StudentName">';  
    
@@ -71,9 +71,9 @@ $StLst = $StudentList->fetchAll(PDO::FETCH_ASSOC);
 //           var_dump($class);
                   
        } 
-           
+             echo '</br>';
             echo '<textarea cols=40 rows=3 placeholder="Notes"></textarea>';
-            
+              echo '</br>';
             
        echo '</select>';  
             
