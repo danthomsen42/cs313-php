@@ -69,10 +69,11 @@ $StLst = $StudentList->fetchAll(PDO::FETCH_ASSOC);
 //           $course_code = $ast['courseCode'];
            echo '<option value='.$id.'>'.$FirstName.' '.$LastName. '</option>';
 //           var_dump($class);
-           
-           
-           
+                  
        } 
+           
+            echo '<textarea cols=40 rows=3 placeholder="Notes"></textarea>';
+            
             
        echo '</select>';  
             
