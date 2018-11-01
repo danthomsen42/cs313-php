@@ -41,7 +41,7 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
 
 
 
-        <ul>
+<!--        <ul>-->
 
             <table name="StudentQueue">
                 <tr>
@@ -246,7 +246,7 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
         
         
           ?>
-        </ul>
+<!--        </ul>-->
 
         <form>
 
