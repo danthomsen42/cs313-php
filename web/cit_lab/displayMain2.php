@@ -9,7 +9,7 @@ $joined = $db->prepare('SELECT assistants.ast_name, classes.course_code FROM ass
 
 $StudentList = $db->prepare('SELECT id, student_first_name, student_last_name FROM students');
 
-$QueueInfo = $db->prepare('SELECT id, ')
+//$QueueInfo = $db->prepare('SELECT id, ')
 
 $stmt-> execute();
 $courses-> execute();
