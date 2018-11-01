@@ -78,9 +78,10 @@ $StLst = $StudentList->fetchAll(PDO::FETCH_ASSOC);
               echo '</br>';
             
        echo '</select>';  
-                 echo '</br>';
+            echo '</br>';
+            echo '</br>';
                   echo 'Notes:</br>';
-              echo '<textarea cols=40 rows=3 placeholder="Notes"></textarea>';
+              echo '<textarea cols=40 rows=3 placeholder="Notes:"></textarea>';
     echo '</br>';
          
         echo '<input type="submit" value="Submit">';            
