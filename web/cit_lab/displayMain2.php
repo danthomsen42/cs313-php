@@ -87,9 +87,12 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
         echo '</select>';
     echo '</br>'; 
        echo '</br>';
+   
+        
+//The purpose of this Portion is to generate the list of students in the database of students.     
         echo '<select name="StudentName">';  
    
-                   foreach ($StLst as $ListOfStudents) {
+        foreach ($StLst as $ListOfStudents) {
            $FirstName = $ListOfStudents['student_first_name'];
            $LastName = $ListOfStudents['student_last_name']; 
            $id = $ListOfStudents['id'];
@@ -98,17 +101,18 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
 //           var_dump($class);
                   
        } 
-              echo '</br>'; 
-              echo '</br>'; 
-             echo '</br>';
-
-      
-          
-              echo '</br>';
-            
+//              echo '</br>'; 
+//              echo '</br>'; 
+//             echo '</br>';          
+//              echo '</br>';            
        echo '</select>';  
+        
+        
+        
             echo '</br>';
             echo '</br>';
+        
+        
                   echo 'Notes:</br>';
               echo '<textarea cols=40 rows=3 placeholder="Notes:"></textarea>';
     echo '</br>';
@@ -118,10 +122,7 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
             
     echo '<h3>Not on the list? Sign up down below to be added to the list. </h3>';        
         
-            
         
-            
-            
      if  (isset($_POST["StudentFirstName"]) && isset($_POST["StudentLastName"]) && isset($_POST["INumber"])){ 
          $StFirstName = $_POST["StudentFirstName"];
          $StLastName = $_POST["StudentLastName"];
@@ -166,8 +167,8 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
         
         
         
-        $i = 0;
-        echo "<div> ------------- </div>";
+      //  $i = 0;
+     //   echo "<div> ------------- </div>";
 //       foreach ($ast as $assist) {
 //           $assistant_name = $assist['ast_name'];
 ////           $course_code = $ast['courseCode'];
@@ -251,14 +252,12 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
 //            
 //        }
 //        
-//       
-        
-        
+//      You close php here...    
         
           ?>
 <!--        </ul>-->
 
-        <form>
+<!--        <form>-->
 
             <?php 
         //http://www.postgresqltutorial.com/postgresql-php/insert/
@@ -271,7 +270,7 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
         
         ?>
 
-        </form>
+<!--        </form>-->
 
 
 
