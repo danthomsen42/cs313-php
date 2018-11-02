@@ -40,6 +40,7 @@ CREATE TABLE queue
     , enter_time TIMESTAMP NOT NULL
     , start_time TIMESTAMP
     , end_time TIMESTAMP
+    , notes VARCHAR(200)
 );
 
 INSERT INTO classes(course_code) VALUES ('CIT-111');
@@ -67,3 +68,8 @@ classes.course_code
 FROM
 assistants, classes, assistant_classes
 WHERE assistant_classes.ast_name = assistants.id and assistant_classes.course_code = classes.id;
+
+/*
+ALTER TABLE queue
+ADD COLUMN notes VARCHAR(200);
+*/
