@@ -60,7 +60,7 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
             $startTime = $Que['start_time'];
             $assistantName = $Que['ast_name'];
             $notes = $Que['notes'];
-            echo $notes;
+            echo '<div>'.$notes.'</div>';
             if ($endTime === NULL){
             
             echo '<tr>';
