@@ -97,13 +97,13 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
         <?php
         
         
-       echo '<form method="POST" action="displayMain2.php">';   
+echo '<form method="POST" action="displayMain2.php">';   
 
         
-    if (isset($_POST['notes'])){
+    if (isset($_POST['submit'])){
       
-   $studentNameId = $_POST["StudentNameID"];
-   $courseCodeId = $_POST["CourseCodeID"];
+   $studentNameId = $_POST["StudentName"];
+   $courseCodeId = $_POST["courseCode"];
    $studentNotes = $_POST["notes"];
         
     $queueInput = $db->prepare('INSERT INTO queue (student_name, course_code, notes, start_time) VALUES
@@ -114,30 +114,22 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
         }
          catch(Exception $e){
             echo $e;
-         }
-          
+         }          
 }
     echo $studentNameId;    
         
-        
-        echo '<select name="courseCode">';
-        
-        
+    echo '<select name="courseCode">';            
        foreach ($cls as $class) {
            $classcode = $class['course_code'];
            $id = $class['id'];
 //           $course_code = $ast['courseCode'];
            echo '<option value='.$id.' name="CourseCodeID">'.$classcode.'</option>';
-//           var_dump($class);       
-           
+//           var_dump($class);         
        } 
-
-
-     
+        
         echo '</select>';
     echo '</br>'; 
        echo '</br>';
-   
         
 //The purpose of this Portion is to generate the list of students in the database of students.     
         echo '<select name="StudentName">';  
@@ -154,21 +146,20 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
        
        echo '</select>';  
         
-        
-        
             echo '</br>';
             echo '</br>';
-        
         
                   echo 'Notes:</br>';
               echo '<textarea cols=40 rows=3 placeholder="Notes:" name="notes"></textarea>';
     echo '</br>';
          
-          
-
-        
     echo '<input type="submit" value="Submit">';      
     echo '</form>';    
+        
+        
+        
+//////SECOND FORM        
+        
         
     echo '<form method="POST" action="displayMain2.php">';          
     echo '<h3>Not on the list? Sign up down below to be added to the list. </h3>';        
