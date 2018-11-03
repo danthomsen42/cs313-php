@@ -143,8 +143,10 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
     echo '</br>';
          
         echo '<input type="submit" value="Submit">';            
-            
-            
+    
+    echo '</form>';    
+        
+    echo '<form method="POST" action="displayMain2.php">';          
     echo '<h3>Not on the list? Sign up down below to be added to the list. </h3>';        
         
         
@@ -163,6 +165,8 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
             echo $e;
          }
         }  
+        
+        
         
         
         /*    
