@@ -41,17 +41,17 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
 
 
 
-<!--        <ul>-->
+        <!--        <ul>-->
 
-            <table name="StudentQueue" style="width:100%">
-                <tr style="color: white; background-color: orange;">
-                    <th>Student Name</th>
-                    <th>Course</th>
-                    <th>Comments</th>
-                    <th>Lab Assistant</th>
-                    <th>Minutes in Queue</th>
-                </tr>
-                <?php 
+        <table name="StudentQueue" style="width:100%">
+            <tr style="color: white; background-color: orange;">
+                <th>Student Name</th>
+                <th>Course</th>
+                <th>Comments</th>
+                <th>Lab Assistant</th>
+                <th>Minutes in Queue</th>
+            </tr>
+            <?php 
                         
         foreach ($Queue as $Que) {
             $endTime = $Que['end_time'];
@@ -87,20 +87,20 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
               
                 
           
-                ?>  
-<!--                    <td></td>-->
+                ?>
+            <!--                    <td></td>-->
 
-            </table>
+        </table>
 
 
 
-            <?php
+        <?php
         
         
        echo '<form method="POST" action="displayMain2.php">';   
 
         
-        if (isset($_POST['notes'])){
+    if (isset($_POST['notes'])){
       
    $studentNameId = $_POST["StudentNameID"];
    $courseCodeId = $_POST["CourseCodeID"];
@@ -109,7 +109,13 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
     $queueInput = $db->prepare('INSERT INTO queue (student_name, course_code, notes, start_time) VALUES
     (\''.$studentNameId.'\',\''.$courseCodeId.'\',\''.$studentNotes.'\', now());');    
       
-    $queueInput->execute();
+            try {
+         $queueInput->execute();
+        }
+         catch(Exception $e){
+            echo $e;
+         }
+        }  
 }
         
         
@@ -202,15 +208,15 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
 //      You close php here...    
         
           ?>
-<!--        </ul>-->
+            <!--        </ul>-->
 
-<!--        <form>-->
+            <!--        <form>-->
 
             <?php 
 
         ?>
 
-<!--        </form>-->
+            <!--        </form>-->
 
 
 
