@@ -59,7 +59,7 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
             $courseCode = $Que['course_code'];
             $startTime = $Que['start_time'];
             $assistantName = $Que['ast_name'];
-            $roger = $Que['notes'];
+            $roger = $Que['enter_time'];
             echo '<div>'.$roger.'</div>';
             if ($endTime === NULL){
             
