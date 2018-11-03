@@ -98,7 +98,23 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
         
         
        echo '<form method="POST" action="displayMain2.php">';   
-    echo '<select name="courseCode">';
+
+        
+        if (isset($_POST['notes'])){
+      
+   $studentNameId = $_POST["StudentNameID"];
+   $courseCodeId = $_POST["CourseCodeID"];
+   $studentNotes = $_POST["notes"];
+        
+    $queueInput = $db->prepare('INSERT INTO queue (student_name, course_code, notes, start_time) VALUES
+    (\''.$studentNameId.'\',\''.$courseCodeId.'\',\''.$studentNotes.'\', now());');    
+      
+    $queueInput->execute();
+}
+        
+        
+        
+        echo '<select name="courseCode">';
         
         
        foreach ($cls as $class) {
@@ -143,17 +159,7 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
     echo '</br>';
          
           
-if (isset($_POST['notes'])){
-      
-   $studentNameId = $_POST["StudentNameID"];
-   $courseCodeId = $_POST["CourseCodeID"];
-   $studentNotes = $_POST["notes"];
-        
-    $queueInput = $db->prepare('INSERT INTO queue (student_name, course_code, notes, start_time) VALUES
-    (\''.$studentNameId.'\',\''.$courseCodeId.'\',\''.$studentNotes.'\', now());');    
-      
-    $queueInput->execute();
-}
+
         
     echo '<input type="submit" value="Submit">';      
     echo '</form>';    
