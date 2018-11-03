@@ -123,7 +123,7 @@ echo '<form method="POST" action="displayMain2.php">';
            $classcode = $class['course_code'];
            $id = $class['id'];
 //           $course_code = $ast['courseCode'];
-           echo '<option value='.$id.' name="CourseCodeID">'.$classcode.'</option>';
+           echo '<option value='.$id.'>'.$classcode.'</option>';
 //           var_dump($class);         
        } 
         
@@ -139,7 +139,7 @@ echo '<form method="POST" action="displayMain2.php">';
            $LastName = $ListOfStudents['student_last_name']; 
            $id = $ListOfStudents['id'];
 //           $course_code = $ast['courseCode'];
-           echo '<option value='.$id.'name="StudentNameID">'.$FirstName.' '.$LastName. '</option>';
+           echo '<option value='.$id.'>'.$FirstName.' '.$LastName. '</option>';
 //           var_dump($class);
                   
        } 
