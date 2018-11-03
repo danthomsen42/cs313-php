@@ -105,9 +105,9 @@ echo '<form method="POST" action="displayMain2.php">';
       
    $studentNameId = $_POST["StudentName"];
    $courseCodeId = $_POST["courseCode"];
-   $studentNotes = $_POST["notes"];
+   $studentNotes = $_POST["comments"];
         
-    $queueInput = $db->prepare('INSERT INTO queue (student_name, course_code, notes, enter_time) VALUES
+    $queueInput = $db->prepare('INSERT INTO queue (student_name, course_code, comments, enter_time) VALUES
     (\''.$studentNameId.'\',\''.$courseCodeId.'\',\''.$studentNotes.'\', now());');    
       
             try {
@@ -151,7 +151,7 @@ echo '<form method="POST" action="displayMain2.php">';
             echo '</br>';
         
                   echo 'Notes:</br>';
-              echo '<textarea cols=40 rows=3 placeholder="Notes:" name="notes"></textarea>';
+              echo '<textarea cols=40 rows=3 placeholder="Notes:" name="comments"></textarea>';
     echo '</br>';
          
     echo '<input type="submit" value="Submit">';      
