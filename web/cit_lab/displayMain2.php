@@ -117,7 +117,7 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
          }
           
 }
-        
+    echo $studentNotes;    
         
         
         echo '<select name="courseCode">';
