@@ -51,16 +51,43 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
                     <th>Lab Assistant</th>
                     <th>Minutes in Queue</th>
                 </tr>
-                <tr>
-                    <td>Bobby</td>
-                    <td>Filler</td>
-                    <td>This is a comment</td>
-                    <td></td>
-                    <td>Like 2 minutes ish?</td>
+                <?php 
+                        
+        foreach ($Queue as $Que) {
+            $endTime = $Que['end_time'];
+            $studentName = $Que['student_name'];
+            $courseCode = $Que['course_code'];
+            $startTime = $Que['start_time'];
+            $assistantName = $Que['ast_name'];
+            $notes = $Que['notes'];
+            if ($endTime === NULL){
+            
+            echo '<tr>';
+                echo '<td>'.$studentName.'</td>';
+                echo '<td>'.$courseCode.'</td>';
+                echo '<td>'.$notes.'</td>';
+                echo '<td>'.$assistantName.'</td>';
+                echo '<td>filler</td>';
+            echo '</tr>';
+            }
+            else{
+                echo '<tr>';
+                echo '<td>Filler</td>';
+                echo '<td>Filler</td>';
+                echo '<td>Filler</td>';
+                echo '<td>Filler</td>';
+                echo '<td>Filler</td>';
+            echo '</tr>';
+            }
+            
+        }
+        
                 
                 
-                </tr>
+              
                 
+          
+                ?>  
 <!--                    <td></td>-->
 
             </table>
@@ -82,7 +109,8 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
 //           var_dump($class);       
            
        } 
-        
+
+
      
         echo '</select>';
     echo '</br>'; 
