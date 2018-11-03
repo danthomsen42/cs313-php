@@ -58,7 +58,7 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
             </tr>
             <?php 
                         
-            $StudentByID = $db->prepare('SELECT student_first_name FROM students, queue WHERE queue.student_name = students.id;')
+            $StudentByID = $db->prepare('SELECT student_first_name FROM students, queue WHERE queue.student_name = students.id;');
           echo $StudentById-> execute();
                 
                 
