@@ -106,7 +106,7 @@ echo '<form method="POST" action="displayMain2.php">';
    $courseCodeId = $_POST["courseCode"];
    $studentNotes = $_POST["notes"];
         
-    $queueInput = $db->prepare('INSERT INTO queue (student_name, course_code, notes, start_time) VALUES
+    $queueInput = $db->prepare('INSERT INTO queue (student_name, course_code, notes, enter_time) VALUES
     (\''.$studentNameId.'\',\''.$courseCodeId.'\',\''.$studentNotes.'\', now());');    
       
             try {
