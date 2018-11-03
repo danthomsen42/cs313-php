@@ -11,6 +11,11 @@ $StudentList = $db->prepare('SELECT id, student_first_name, student_last_name FR
 
 $QueueInfo = $db->prepare('SELECT id, student_name, course_code, ast_name, enter_time, start_time, end_time, comments FROM queue');
 
+
+
+
+
+
 $stmt-> execute();
 $courses-> execute();
 $joined-> execute();
@@ -53,6 +58,10 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
             </tr>
             <?php 
                         
+            $StudentByID = $db->prepare('SELECT student_first_name FROM students, queue WHERE queue.student_name = students.id;')
+          echo $StudentById-> execute();
+                
+                
         foreach ($Queue as $Que) {
             $endTime = $Que['end_time'];
             $studentName = $Que['student_name'];
