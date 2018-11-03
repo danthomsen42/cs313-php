@@ -100,7 +100,7 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
 echo '<form method="POST" action="displayMain2.php">';   
 
         
-    if (isset($_POST['submit'])){
+    if (isset($_POST['notes'])){
       
    $studentNameId = $_POST["StudentName"];
    $courseCodeId = $_POST["courseCode"];
