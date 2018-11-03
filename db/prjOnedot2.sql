@@ -40,7 +40,7 @@ CREATE TABLE queue
     , enter_time TIMESTAMP NOT NULL
     , start_time TIMESTAMP
     , end_time TIMESTAMP
-    , notes VARCHAR(200)
+    , comments VARCHAR(200)
 );
 
 INSERT INTO classes(course_code) VALUES ('CIT-111');

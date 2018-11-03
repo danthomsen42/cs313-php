@@ -9,7 +9,7 @@ $joined = $db->prepare('SELECT assistants.ast_name, classes.course_code FROM ass
 
 $StudentList = $db->prepare('SELECT id, student_first_name, student_last_name FROM students');
 
-$QueueInfo = $db->prepare('SELECT id, student_name, course_code, ast_name, enter_time, start_time, end_time FROM queue');
+$QueueInfo = $db->prepare('SELECT id, student_name, course_code, ast_name, enter_time, start_time, end_time, comments FROM queue');
 
 $stmt-> execute();
 $courses-> execute();
@@ -59,7 +59,7 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
             $courseCode = $Que['course_code'];
             $startTime = $Que['start_time'];
             $assistantName = $Que['ast_name'];
-            $roger = $Que['enter_time'];
+            $roger = $Que['comments'];
             echo '<div>'.$roger.'</div>';
             if ($endTime === NULL){
             
