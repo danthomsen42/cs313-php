@@ -143,7 +143,8 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
     echo '</br>';
          
           
-    
+if (isset($_POST['notes'])){
+      
    $studentNameId = $_POST["StudentNameID"];
    $courseCodeId = $_POST["CourseCodeID"];
    $studentNotes = $_POST["notes"];
@@ -151,7 +152,9 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
     $queueInput = $db->prepare('INSERT INTO queue (student_name, course_code, notes, start_time) VALUES
     (\''.$studentNameId.'\',\''.$courseCodeId.'\',\''.$studentNotes.'\', now());');    
       
-    $queueInput->execute();    
+    $queueInput->execute();
+}
+        
     echo '<input type="submit" value="Submit">';      
     echo '</form>';    
         
