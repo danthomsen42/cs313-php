@@ -115,7 +115,7 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
          catch(Exception $e){
             echo $e;
          }
-        }  
+          
 }
         
         
