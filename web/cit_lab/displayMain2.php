@@ -72,7 +72,7 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
             $endTime = $Que['end_time'];
             
 //            $studentIndex = $Que['student_name'];
-            $studentName = $Que['student_name'];
+            $studentName = $Que['student_first_name'];
             
 //            $studentName = $Que['student_name'];
             $courseCode = $Que['course_code'];
