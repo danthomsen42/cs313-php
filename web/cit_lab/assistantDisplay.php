@@ -4,13 +4,13 @@
 </head>
     <body>
     
-      <form method="POST" action="displayMain2.php?action=queue">
+      <form method="POST">
         
         <?php  
           require('dbConnect.php');
           $db = get_db();
           
-          $Assistant_finish = $db->prepare('UPDATE queue SET end_time = now() WHERE queue.id = 1');
+          $Assistant_finish = $db->prepare('UPDATE queue SET end_time = now() WHERE queue.id = 3');
           
           
           $Assistant_finish->execute();
