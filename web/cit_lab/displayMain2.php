@@ -3,11 +3,9 @@
 require('dbConnect.php');
 $db = get_db();
 //query for all movies
-$stmt = $db->prepare('SELECT id, ast_name FROM assistants');
-$courses = $db->prepare('SELECT id, course_code FROM classes');
-$joined = $db->prepare('SELECT assistants.ast_name, classes.course_code FROM assistants, classes, assistant_classes WHERE assistant_classes.ast_name = assistants.id and assistant_classes.course_Code = classes.id');
 
-$StudentList = $db->prepare('SELECT id, student_first_name, student_last_name FROM students');
+
+
 
 $QueueInfo = $db->prepare('SELECT id, student_name, course_code, ast_name, enter_time, start_time, end_time, comments FROM queue');
 
@@ -28,17 +26,11 @@ $StuID = $StudentByID->fetchAll(PDO::FETCH_ASSOC);
 
 
 
-$stmt-> execute();
-$courses-> execute();
-$joined-> execute();
-$StudentList-> execute();
+
 $QueueInfo-> execute();
 
 
-$ast = $stmt->fetchAll(PDO::FETCH_ASSOC);
-$cls = $courses->fetchAll(PDO::FETCH_ASSOC);
-$jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
-$StLst = $StudentList->fetchAll(PDO::FETCH_ASSOC);
+
 $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
 
 
