@@ -19,7 +19,7 @@ $cls = $courses->fetchAll(PDO::FETCH_ASSOC);
 $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
 $StLst = $StudentList->fetchAll(PDO::FETCH_ASSOC);
         
-echo '<form method="POST" action="displayMain2.php?action=queue">';   
+echo '<form method="POST">';   
 
         
     if (isset($_POST['comments'])){
@@ -83,7 +83,7 @@ echo '<form method="POST" action="displayMain2.php?action=queue">';
 //////SECOND FORM        
         
         
-    echo '<form method="POST" action="displayMain2.php?action=students">';          
+    echo '<form method="POST">';          
     echo '<h3>Not on the list? Sign up down below to be added to the list. </h3>';        
         
         
