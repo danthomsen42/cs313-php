@@ -10,7 +10,7 @@
           require('dbConnect.php');
           
           
-          $Assistant_finish = $db->prepare('UPDATE queue SET end_time = now() WHERE queue.id = 1;');
+          $Assistant_finish = $db->prepare('UPDATE queue SET end_time = now() WHERE queue.id = 1');
           
           
           $assistant_finish->execute();
