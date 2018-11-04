@@ -38,7 +38,7 @@ echo '<form method="POST">';
             echo $e;
          }          
 }
-    echo $studentNameId;    
+   // echo $studentNameId;    
         
     echo '<select name="courseCode">';            
        foreach ($cls as $class) {

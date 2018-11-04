@@ -111,7 +111,7 @@ $StLst = $StudentList->fetchAll(PDO::FETCH_ASSOC);
         }  
         
         
-        /*    
+            
                if  (isset($_POST["StudentFirstName"]) && isset($_POST["StudentLastName"]) && isset($_POST["INumber"])){ 
          $StFirstName = $_POST["StudentFirstName"];
          $StLastName = $_POST["StudentLastName"];
