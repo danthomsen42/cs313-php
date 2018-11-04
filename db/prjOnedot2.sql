@@ -9,7 +9,6 @@ CREATE TABLE assistants
 (
     id SERIAL PRIMARY KEY
     , ast_name VARCHAR(50) UNIQUE NOT NULL
-
 );
 
 CREATE TABLE assistant_classes

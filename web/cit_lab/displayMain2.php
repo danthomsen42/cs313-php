@@ -25,6 +25,9 @@ $StuID = $StudentByID->fetchAll(PDO::FETCH_ASSOC);
 
 
 
+
+
+
 $stmt-> execute();
 $courses-> execute();
 $joined-> execute();
