@@ -4,7 +4,7 @@
 </head>
     <body>
     
-      <form method="POST" action='displayMain2.php?action=queue'>
+      <form method="POST" action="displayMain2.php?action=queue">
         
         <?php  
           require('dbConnect.php');
