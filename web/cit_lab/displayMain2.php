@@ -1,7 +1,7 @@
 <?php
 //conect to DB
 require('dbConnect.php');
-//$db = get_db();
+$db = get_db();
 //query for all movies
 $stmt = $db->prepare('SELECT id, ast_name FROM assistants');
 $courses = $db->prepare('SELECT id, course_code FROM classes');
