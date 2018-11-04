@@ -66,8 +66,8 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
         foreach ($Queue as $index => $Que) {
             $endTime = $Que['end_time'];
             
-            $studentIndex = $Que['student_name'];
-            $studentName = $StuID[$studentIndex];
+//            $studentIndex = $Que['student_name'];
+            $studentName = $index['student_name'];
             
 //            $studentName = $Que['student_name'];
             $courseCode = $Que['course_code'];
