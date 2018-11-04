@@ -14,9 +14,10 @@ $QueueInfo = $db->prepare('SELECT id, student_name, course_code, ast_name, enter
 
 $StudentByID = $db->prepare('SELECT
 students.student_first_name,
-queue.id, student_name, course_code, ast_name, enter_time, start_time, end_time, comments 
+queue.id, student_name, queue.course_code as queue_course_code, ast_name, enter_time, start_time, end_time, comments, classes.course_code as classes_course_code 
 FROM students
 JOIN queue ON queue.student_name = students.id
+JOIN classes ON queue.course_code = classes.id
 WHERE queue.student_name = students.id;');
 $StudentByID-> execute();
 $StuID = $StudentByID->fetchAll(PDO::FETCH_ASSOC);
@@ -75,7 +76,7 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
             $studentName = $Que['student_first_name'];
             
 //            $studentName = $Que['student_name'];
-            $courseCode = $Que['course_code'];
+            $courseCode = $Que['classes_course_code'];
             $startTime = $Que['start_time'];
             $assistantName = $Que['ast_name'];
             $roger = $Que['comments'];
