@@ -30,17 +30,13 @@ $cls = $courses->fetchAll(PDO::FETCH_ASSOC);
 $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
 $StLst = $StudentList->fetchAll(PDO::FETCH_ASSOC);
 $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
-// go through each movie in th eresult and display it
+
 
 ?>
     <!DOCTYPE html>
     <html>
-
     <head>
-
-
     </head>
-
     <body>
         <header>
             <h2>Assistants and Classes</h2>
@@ -60,25 +56,25 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
             </tr>
             <?php 
                         
-
-                
-        foreach ($Queue as $index => $Que) {
-            $endTime = $Que['end_time'];
-            
     ///////WORK WITH DAVID!!!!!//////////        
      //       $studentIndex = $Que['student_name'];
        //     $studentName = $StuID[$studentIndex];
             
             
             
-            $studentName = $Que['student_name'];
+                
+        foreach ($Queue as $index => $Que) {
+            $endTime = $Que['end_time'];
+            
+            $studentIndex = $Que['student_name'];
+            $studentName = $StuID[$studentIndex];
+            
+//            $studentName = $Que['student_name'];
             $courseCode = $Que['course_code'];
             $startTime = $Que['start_time'];
             $assistantName = $Que['ast_name'];
             $roger = $Que['comments'];
-//            echo '<div>'.$roger.'</div>';
             if ($endTime === NULL){
-            
             echo '<tr>';
                 echo '<td>'.$studentName.'</td>';
                 echo '<td>'.$courseCode.'</td>';
@@ -98,12 +94,6 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
             }
             
         }
-        
-                
-                
-              
-                
-          
                 ?>
             <!--                    <td></td>-->
 
@@ -196,12 +186,8 @@ echo '<form method="POST" action="displayMain2.php">';
          catch(Exception $e){
             echo $e;
          }
-        }  
-        
-        
-        
-    
-            
+        }          
+     
       
     echo '<input type="text" name="StudentFirstName" placeholder="First name">';
     echo '<input type="text" name="StudentLastName" placeholder="Last name">'; 

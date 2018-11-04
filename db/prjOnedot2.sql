@@ -25,10 +25,6 @@ CREATE TABLE students
     , student_first_name VARCHAR(50) NOT NULL
     , student_last_name VARCHAR(50) NOT NULL
     , i_number INTEGER UNIQUE NOT NULL 
-
-
-
-
 );
 
 CREATE TABLE queue
