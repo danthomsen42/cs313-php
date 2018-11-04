@@ -14,7 +14,7 @@ $QueueInfo = $db->prepare('SELECT id, student_name, course_code, ast_name, enter
 
 $StudentByID = $db->prepare('SELECT student_first_name FROM students, queue WHERE queue.student_name = students.id;');
 $StudentByID-> execute();
-$StuID = $StudentByID->fetchAll();
+$StuID = $StudentByID->fetchAll(PDO::FETCH_ASSOC);
 
 
 
