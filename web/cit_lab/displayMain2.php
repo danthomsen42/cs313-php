@@ -93,15 +93,15 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
                 echo '<td>filler</td>';
             echo '</tr>';
             }
-            else{
-                echo '<tr>';
-                echo '<td>Filler</td>';
-                echo '<td>Filler</td>';
-                echo '<td>Filler</td>';
-                echo '<td>Filler</td>';
-                echo '<td>Filler</td>';
-            echo '</tr>';
-            }
+//            else{
+//                echo '<tr>';
+//                echo '<td>Filler</td>';
+//                echo '<td>Filler</td>';
+//                echo '<td>Filler</td>';
+//                echo '<td>Filler</td>';
+//                echo '<td>Filler</td>';
+//            echo '</tr>';
+//            }
             
         }
                 ?>
