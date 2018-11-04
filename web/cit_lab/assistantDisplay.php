@@ -18,7 +18,7 @@
           
           ?>
         
-        <input type="submit" value="Skip next person">
+        <input type="submit" value="Submit">
         </form>  
         
     </body>
