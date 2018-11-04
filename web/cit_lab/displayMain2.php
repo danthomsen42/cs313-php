@@ -111,7 +111,7 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
         <?php
         
         
-echo '<form method="POST" action="displayMain2.php">';   
+echo '<form method="POST" action="displayMain2.php?action=queue">';   
 
         
     if (isset($_POST['comments'])){
@@ -175,7 +175,7 @@ echo '<form method="POST" action="displayMain2.php">';
 //////SECOND FORM        
         
         
-    echo '<form method="POST" action="displayMain2.php">';          
+    echo '<form method="POST" action="displayMain2.php?action=students">';          
     echo '<h3>Not on the list? Sign up down below to be added to the list. </h3>';        
         
         
