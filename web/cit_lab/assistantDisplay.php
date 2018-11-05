@@ -18,7 +18,7 @@ FROM students
 JOIN queue ON queue.student_name = students.id
 JOIN classes ON queue.course_code = classes.id
 WHERE queue.student_name = students.id
-ORDER BY queue.id;')
+ORDER BY queue.id;');
      $StudentByID-> execute();
     $StuID = $StudentByID->fetchAll(PDO::FETCH_ASSOC);
           
