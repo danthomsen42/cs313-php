@@ -15,12 +15,9 @@ $joined = $db->prepare('SELECT assistants.ast_name, classes.course_code FROM ass
 $StudentList = $db->prepare('SELECT id, student_first_name, student_last_name FROM students');
 $QueueInfo = $db->prepare('SELECT student_name, end_time FROM queue');    
     
- $studentNumber = 0; 
+// $studentNumber = 0; 
 //echo 'Hello';    
-var_dump($_POST);    
-$studentNumber = $_POST['StudentName'];  
-    echo $studentNumber;  
-$CheckQueue = $db->prepare('SELECT COUNT(*) FROM queue WHERE end_time = NULL AND student_name = '.$studentNumber);  
+//var_dump($_POST);    
 //echo 'SELECT COUNT(*) FROM queue WHERE end_time = NULL AND student_name = '.$studentNumber.'';    
     
  //echo 'Hello1';      
@@ -62,6 +59,10 @@ echo 'Hello5';
     (\''.$studentNameId.'\',\''.$courseCodeId.'\',\''.$studentNotes.'\', now());');    
       
             try {
+      //  $studentNumber = $_POST['StudentName'];  
+    //echo $studentNumber;  
+$CheckQueue = $db->prepare('SELECT COUNT(*) FROM queue WHERE end_time = NULL AND student_name = '.$studentNameId);  
+        
         $CheckQueue->execute();
         $Check = $CheckQueue->fetchAll(PDO::FETCH_ASSOC);    
             if ($Check > 0){
