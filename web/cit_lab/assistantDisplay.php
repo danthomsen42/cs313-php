@@ -45,7 +45,7 @@ $asstnt = $Assistants->fetchAll(PDO::FETCH_ASSOC);
                echo '</select>';   
           
     echo '<select name="AssistantName">';
-          foreach (asstnt as ast){
+          foreach (asstnt as ast) {
               $astID = $ast['id'];
               $astName = $ast['ast_name'];
           echo '<option value='.$astID.'>'.$astName.'</option>';
