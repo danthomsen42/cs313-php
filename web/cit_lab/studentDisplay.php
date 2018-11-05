@@ -95,7 +95,7 @@ echo '<form method="POST" onsubmit="return validateMyForm();">';
 
 
                 <?php
-                nullOperand = NULL; 
+                $nullOperand = NULL; 
                 foreach ($QueueStuff as $Que) {
                     $endTime = $Que['end_time'];
                     $Student = $Que['student_name'];
