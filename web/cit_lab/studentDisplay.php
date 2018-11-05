@@ -101,14 +101,14 @@ echo '<form method="POST" onsubmit="return validateMyForm();">';
                     $Student = $Que['student_name'];
                     foreach ($StLst as $ListOfStudents){
                              $id = $ListOfStudents['id'];
-                echo 'if ('.$id.' == '.$Student.' && '.$endTime.' === '.$nullOperand.'){';
-                        echo 'alert("validation failed false");';
+                echo 'if ('.$id.' == '.$Student.' && '.$endTime.' === '.$nullOperand.'){ <br>';
+                        echo 'alert("validation failed false");<br>';
                         
-                        echo 'return false;}';
+                        echo 'return false;}<br>';
                         
-                        echo 'else{';
+                        echo 'else{<br>';
                             
-                        echo 'return true;}';    
+                        echo 'return true;}<br>';    
                     }
                     }
                 ?>
