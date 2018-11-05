@@ -35,17 +35,19 @@ foreach ($AstLst as $asls){
     $astlstName = $asls['ast_name'];
     $astlstCode = $asls['course_code'];
     
-    if(!isset($_SESSION[$astlstName][$astlstCode])){
-    
-        $_SESSION[$astlstName][$astlstCode] = true;
+    if(isset($_SESSION[$astlstName][$astlstCode])){
+    ;
+       
 }
-    
+    else{
+         $_SESSION[$astlstName][$astlstCode] = true;
+    }
     
 }
 
 var_dump($_SESSION);
 
-
+$_SESSION[1][3] = false;
 
 $QueueInfo-> execute();
 
