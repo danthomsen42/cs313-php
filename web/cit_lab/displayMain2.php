@@ -61,7 +61,7 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
     <!DOCTYPE html>
     <html>
     <head>
-<!--         <meta http-equiv="refresh" content="5; URL=https://radiant-gorge-54637.herokuapp.com/cit_lab/displayMain2.php">-->
+         <meta http-equiv="refresh" content="5; URL=https://radiant-gorge-54637.herokuapp.com/cit_lab/displayMain2.php">
     </head>
     <body>
         <header>

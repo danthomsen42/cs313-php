@@ -112,7 +112,11 @@ echo '<form method="POST">';
     echo '</form>';
         
         
-
+echo '<script>
+    if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
+    }
+</script>';
 //        
 //      You close php here...    
         
