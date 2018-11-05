@@ -21,7 +21,14 @@ ORDER BY queue.id;');
 $StudentByID-> execute();
 $StuID = $StudentByID->fetchAll(PDO::FETCH_ASSOC);
 
-
+          $assistantList = $db->prepare('SELECT * FROM assistant_classes');
+          
+          $assistantList->execute();
+          
+          
+$AstLst = $assitantList->fetchAll(PDO::FETCH_ASSOC);
+          
+          var_dump($AstLst);
 
 
 

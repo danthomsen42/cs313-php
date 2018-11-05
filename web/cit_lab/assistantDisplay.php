@@ -13,15 +13,7 @@
           require('dbConnect.php');
           $db = get_db();
           
-          
-          $assistantList = $db->prepare('SELECT * FROM assistant_classes');
-          
-          $assistantList->execute();
-          
-          
-          $AstLst = $assitantList->fetchAll(PDO::FETCH_ASSOC);
-          
-          var_dump($AstLst);
+
           
           //Display the next student in the queue that the assistant is assigned to
           
