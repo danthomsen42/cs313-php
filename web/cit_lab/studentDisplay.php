@@ -19,7 +19,7 @@ echo $studentNumber;
 echo 'Hello';    
 $studentNumber = $_POST['student_name'];  
 $CheckQueue = $db->prepare('SELECT COUNT(*) FROM queue WHERE end_time == NULL && student_name = '.$studentNumber.'');    
-    
+ echo 'Hello1';      
 
 
 $stmt-> execute();
