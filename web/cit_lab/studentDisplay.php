@@ -17,7 +17,7 @@ $QueueInfo = $db->prepare('SELECT student_name, end_time FROM queue');
     
     
 $studentNumber = $_POST['student_name'];  
-$CheckQueue = $db->prepare('SELECT COUNT(*) FROM queue WHERE end_time == NULL && student_name = '.$studentNumber);    
+$CheckQueue = $db->prepare('SELECT COUNT(*) FROM queue WHERE end_time == NULL && student_name = '.$studentNumber.'');    
     
 
 
@@ -63,7 +63,7 @@ echo '<form method="POST" onsubmit="return validateMyForm();">';
          catch(Exception $e){
             echo $e;
          }          
-}
+        }
     }
    // echo $studentNameId;    
         
@@ -110,47 +110,47 @@ echo '<form method="POST" onsubmit="return validateMyForm();">';
         <script>
             function validateMyForm() {
                 var result = <?php echo alertCheck(); ?>
-                    return result;
-//                <?php
-//                function alertCheck(){
-//                $nullOperand = NULL; 
-//                foreach ($QueueStuff as $Que) {
-//                    $endTime = $Que['end_time'];
-//                    $Student = $Que['student_name'];
-//                    foreach ($StLst as $ListOfStudents){
-//                             $id = $ListOfStudents['id'];
-//                    if ($id == $Student && $endTime === $nullOperand){    
-//               // echo 'if ('.$id.' == '.$Student.' && '.$endTime.' === '.$nullOperand.'){ <br>';
-//                        echo 'alert("validation failed false");<br>';
-//                        return 'false';
-//                        echo 'return false;<br>';
-//                    }
-//                        //echo 'else{<br>';
-//                    else{        
-//                        return 'true';
-//                        echo 'return true;<br>';    
-//                    }
-//                    }
-//                    }
-//                }
-//                ?>
-                }
-                
-                
+                return result;
+                //                <?php
+                //                function alertCheck(){
+                //                $nullOperand = NULL; 
+                //                foreach ($QueueStuff as $Que) {
+                //                    $endTime = $Que['end_time'];
+                //                    $Student = $Que['student_name'];
+                //                    foreach ($StLst as $ListOfStudents){
+                //                             $id = $ListOfStudents['id'];
+                //                    if ($id == $Student && $endTime === $nullOperand){    
+                //               // echo 'if ('.$id.' == '.$Student.' && '.$endTime.' === '.$nullOperand.'){ <br>';
+                //                        echo 'alert("validation failed false");<br>';
+                //                        return 'false';
+                //                        echo 'return false;<br>';
+                //                    }
+                //                        //echo 'else{<br>';
+                //                    else{        
+                //                        return 'true';
+                //                        echo 'return true;<br>';    
+                //                    }
+                //                    }
+                //                    }
+                //                }
+                //                ?>
+            }
 
 
-//                if (check
-//                    if your conditions are not satisfying) {
-//                    alert("validation failed false");
-//                    returnToPreviousPage();
-//                    return false;
-//                }
-//
-//                alert("validations passed");
-//                return true;
-//
-//
-//            }
+
+
+            //                if (check
+            //                    if your conditions are not satisfying) {
+            //                    alert("validation failed false");
+            //                    returnToPreviousPage();
+            //                    return false;
+            //                }
+            //
+            //                alert("validations passed");
+            //                return true;
+            //
+            //
+            //            }
 
         </script>
 
