@@ -29,7 +29,7 @@ ORDER BY queue.id;');
 //            $studentIndex = $Que['student_name'];
             $studentFirstName = $Que['student_first_name'];
                 $studentLastName = $Que['student_last_name'];
-            $queueID = $Que['queue.id']
+            $queueID = $Que['queue.id'];
 //            $studentName = $Que['student_name'];
             //$courseCode = $Que['classes_course_code'];
             $startTime = $Que['start_time'];
