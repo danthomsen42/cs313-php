@@ -36,7 +36,7 @@ ORDER BY queue.id;');
            // $assistantName = $Que['ast_name'];
          //   $roger = $Que['comments'];
             if ($endTime === NULL){      
-          echo '<option value='.$queueID.'>'.$studentFirstName.' '.$studentLastName.' '. $courseCode.'</option>';
+          echo '<option value='.$queueID.'>'.$studentFirstName.' '.$studentLastName.' ------- '. $courseCode.'</option>';
                 
                 
             }
