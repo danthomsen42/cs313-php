@@ -36,7 +36,7 @@ foreach ($AstLst as $asls){
     $astlstName = $asls['ast_name'];
     $astlstCode = $asls['course_code'];
     
-    if($_SESSION[$astlstName][$astlstCode] == true || $_SESSION[$astlstName][$astlstCode] == false){
+    if($_SESSION[$astlstName][$astlstCode] === true || $_SESSION[$astlstName][$astlstCode] === false){
     ;
        
 }
