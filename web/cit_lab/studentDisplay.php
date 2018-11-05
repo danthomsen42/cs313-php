@@ -15,9 +15,10 @@ $joined = $db->prepare('SELECT assistants.ast_name, classes.course_code FROM ass
 $StudentList = $db->prepare('SELECT id, student_first_name, student_last_name FROM students');
 $QueueInfo = $db->prepare('SELECT student_name, end_time FROM queue');    
     
-echo $studentNumber;   
+ $studentNumber = 0; 
 echo 'Hello';    
 $studentNumber = $_POST['student_name'];  
+    echo $studentNumber;  
 $CheckQueue = $db->prepare('SELECT COUNT(*) FROM queue WHERE end_time = NULL AND student_name = "'.$studentNumber.'"');  
 echo 'SELECT COUNT(*) FROM queue WHERE end_time = NULL AND student_name = '.$studentNumber.'';    
     
