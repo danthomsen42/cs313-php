@@ -101,8 +101,8 @@ echo '<form method="POST" onsubmit="return validateMyForm();">';
                     $Student = $Que['student_name'];
                     foreach ($StLst as $ListOfStudents){
                              $id = $ListOfStudents['id'];
-                echo 'if ('.$id.' == '.$Student.' && '.$endTime.' === '.nullOperand.'){'
-                        echo                     'alert("validation failed false");';
+                echo 'if ('.$id.' == '.$Student.' && '.$endTime.' === '.nullOperand.'){';
+                        echo 'alert("validation failed false");';
                         
                         echo 'return false;}';
                         
