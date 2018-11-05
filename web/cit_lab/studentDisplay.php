@@ -92,9 +92,10 @@ echo '<form method="POST" onsubmit="return validateMyForm();">';
 
         <script>
             function validateMyForm() {
-
-
+                var result = <?php echo alertCheck(); ?>
+                    return result;
                 <?php
+                function alertCheck(){
                 $nullOperand = NULL; 
                 foreach ($QueueStuff as $Que) {
                     $endTime = $Que['end_time'];
@@ -104,15 +105,17 @@ echo '<form method="POST" onsubmit="return validateMyForm();">';
                     if ($id == $Student && $endTime === $nullOperand){    
                // echo 'if ('.$id.' == '.$Student.' && '.$endTime.' === '.$nullOperand.'){ <br>';
                         echo 'alert("validation failed false");<br>';
-                        
+                        echo return false;
                         echo 'return false;<br>';
                     }
                         //echo 'else{<br>';
                     else{        
+                        echo return true;
                         echo 'return true;<br>';    
                     }
                     }
                     }
+                }
                 ?>
                 }
                 
