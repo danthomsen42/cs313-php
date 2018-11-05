@@ -105,12 +105,12 @@ echo '<form method="POST" onsubmit="return validateMyForm();">';
                     if ($id == $Student && $endTime === $nullOperand){    
                // echo 'if ('.$id.' == '.$Student.' && '.$endTime.' === '.$nullOperand.'){ <br>';
                         echo 'alert("validation failed false");<br>';
-                        echo return false;
+                        return false;
                         echo 'return false;<br>';
                     }
                         //echo 'else{<br>';
                     else{        
-                        echo return true;
+                        return true;
                         echo 'return true;<br>';    
                     }
                     }
