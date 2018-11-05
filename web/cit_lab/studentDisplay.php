@@ -18,7 +18,7 @@ $QueueInfo = $db->prepare('SELECT student_name, end_time FROM queue');
  $studentNumber = 0; 
 //echo 'Hello';    
 var_dump($_POST);    
-$studentNumber = $_POST['student_name'];  
+$studentNumber = $_POST['studentName'];  
     echo $studentNumber;  
 $CheckQueue = $db->prepare('SELECT COUNT(*) FROM queue WHERE end_time = NULL AND student_name = '.$studentNumber);  
 //echo 'SELECT COUNT(*) FROM queue WHERE end_time = NULL AND student_name = '.$studentNumber.'';    
