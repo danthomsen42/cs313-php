@@ -16,13 +16,14 @@ $StudentList = $db->prepare('SELECT id, student_first_name, student_last_name FR
 $QueueInfo = $db->prepare('SELECT student_name, end_time FROM queue');    
     
  $studentNumber = 0; 
-echo 'Hello';    
+//echo 'Hello';    
+var_dump($_POST);    
 $studentNumber = $_POST['student_name'];  
     echo $studentNumber;  
-$CheckQueue = $db->prepare('SELECT COUNT(*) FROM queue WHERE end_time = NULL AND student_name = "'.$studentNumber.'"');  
-echo 'SELECT COUNT(*) FROM queue WHERE end_time = NULL AND student_name = '.$studentNumber.'';    
+$CheckQueue = $db->prepare('SELECT COUNT(*) FROM queue WHERE end_time = NULL AND student_name = '.$studentNumber);  
+//echo 'SELECT COUNT(*) FROM queue WHERE end_time = NULL AND student_name = '.$studentNumber.'';    
     
- echo 'Hello1';      
+ //echo 'Hello1';      
 
 
 $stmt-> execute();
