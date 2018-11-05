@@ -42,9 +42,9 @@ $Check = $CheckQueue->fetchAll(PDO::FETCH_ASSOC);
 //    else{
 //        
 //    }
-    
+echo 'Hello3';       
 echo '<form method="POST" onsubmit="return validateMyForm();">';   
-
+echo 'Hello4';   
     if ($Check > 0){
         echo 'alert("validation failed false");';
     }
