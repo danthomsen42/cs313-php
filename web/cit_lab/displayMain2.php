@@ -26,7 +26,7 @@ $StuID = $StudentByID->fetchAll(PDO::FETCH_ASSOC);
           $assistantList->execute();
           
           
-$AstLst = $assitantList->fetchAll(PDO::FETCH_ASSOC);
+$AstLst = $assistantList->fetchAll(PDO::FETCH_ASSOC);
           
           var_dump($AstLst);
 
