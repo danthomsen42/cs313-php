@@ -111,9 +111,10 @@ echo '<form method="POST" onsubmit="return validateMyForm();">';
                         echo 'return true;}';    
                     }
                     }
+                ?>
                 }
                 
-                ?>
+                
 
 
 //                if (check
