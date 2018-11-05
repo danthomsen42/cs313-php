@@ -1,4 +1,10 @@
-        <?php
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <?php
 require('dbConnect.php');
 $db = get_db();        
 
@@ -7,19 +13,23 @@ $stmt = $db->prepare('SELECT id, ast_name FROM assistants');
 $courses = $db->prepare('SELECT id, course_code FROM classes');
 $joined = $db->prepare('SELECT assistants.ast_name, classes.course_code FROM assistants, classes, assistant_classes WHERE assistant_classes.ast_name = assistants.id and assistant_classes.course_Code = classes.id');
 $StudentList = $db->prepare('SELECT id, student_first_name, student_last_name FROM students');
+$QueueInfo = $db->prepare('SELECT student_name, end_time FROM queue');    
+    
 
 
 $stmt-> execute();
 $courses-> execute();
 $joined-> execute();
 $StudentList-> execute();
+$QueueInfo->execute();    
 
 $ast = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $cls = $courses->fetchAll(PDO::FETCH_ASSOC);
 $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
 $StLst = $StudentList->fetchAll(PDO::FETCH_ASSOC);
+$QueueStuff = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);  
         
-echo '<form method="POST">';   
+echo '<form method="POST" onsubmit="return validateMyForm();">';   
 
         
     if (isset($_POST['comments'])){
@@ -77,9 +87,53 @@ echo '<form method="POST">';
          
     echo '<input type="submit" value="Submit">';      
     echo '</form>';    
-        
-        
-        
+        ?>
+
+
+        <script>
+            function validateMyForm() {
+
+
+                <?php
+                nullOperand = NULL; 
+                foreach ($QueueStuff as $Que) {
+                    $endTime = $Que['end_time'];
+                    $Student = $Que['student_name'];
+                    foreach ($StLst as $ListOfStudents){
+                             $id = $ListOfStudents['id'];
+                echo 'if ('.$id.' == '.$Student.' && '.$endTime.' === '.nullOperand.'){'
+                        echo                     'alert("validation failed false");';
+                        
+                        echo 'return false;}';
+                        
+                        echo 'else{';
+                            
+                        echo 'return true;}';    
+                    }
+                    }
+                }
+                
+                ?>
+
+
+//                if (check
+//                    if your conditions are not satisfying) {
+//                    alert("validation failed false");
+//                    returnToPreviousPage();
+//                    return false;
+//                }
+//
+//                alert("validations passed");
+//                return true;
+//
+//
+//            }
+
+        </script>
+
+
+
+        <?php
 //////SECOND FORM        
         
         
@@ -121,4 +175,6 @@ echo '<script>
 //      You close php here...    
         
           ?>
- 
+</body>
+
+</html>
