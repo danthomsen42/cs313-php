@@ -30,7 +30,7 @@ $StuID = $StudentByID->fetchAll(PDO::FETCH_ASSOC);
 $AstLst = $assistantList->fetchAll(PDO::FETCH_ASSOC);
           
           //var_dump($AstLst);
-
+var_dump($_SESSION);
 foreach ($AstLst as $asls){
     $astlstID = $asls['id'];
     $astlstName = $asls['ast_name'];
@@ -49,7 +49,7 @@ foreach ($AstLst as $asls){
 var_dump($_SESSION);
 
 $_SESSION[1][3] = false;
-var_dump($_SESSION);
+
 $QueueInfo-> execute();
 
 
