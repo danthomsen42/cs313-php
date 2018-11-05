@@ -31,12 +31,12 @@ ORDER BY queue.id;');
                 $studentLastName = $Que['student_last_name'];
             $queueID = $Que['queue.id'];
 //            $studentName = $Que['student_name'];
-            //$courseCode = $Que['classes_course_code'];
+            $courseCode = $Que['classes_course_code'];
             $startTime = $Que['start_time'];
            // $assistantName = $Que['ast_name'];
          //   $roger = $Que['comments'];
             if ($endTime === NULL){      
-          echo '<option value='.$queueID.'>'.$studentFirstName.' '.$studentLastName. '</option>';
+          echo '<option value='.$queueID.'>'.$studentFirstName.' '.$studentLastName.' '. $courseCode.'</option>';
                 
                 
             }
