@@ -15,23 +15,39 @@ $joined = $db->prepare('SELECT assistants.ast_name, classes.course_code FROM ass
 $StudentList = $db->prepare('SELECT id, student_first_name, student_last_name FROM students');
 $QueueInfo = $db->prepare('SELECT student_name, end_time FROM queue');    
     
+    
+$studentNumber = $_POST['student_name'];  
+$CheckQueue = $db->prepare('SELECT COUNT(*) FROM queue WHERE end_time == NULL && student_name = '.$studentNumber);    
+    
 
 
 $stmt-> execute();
 $courses-> execute();
 $joined-> execute();
 $StudentList-> execute();
-$QueueInfo->execute();    
+$QueueInfo->execute();
+$CheckQueue->execute();    
 
 $ast = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $cls = $courses->fetchAll(PDO::FETCH_ASSOC);
 $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
 $StLst = $StudentList->fetchAll(PDO::FETCH_ASSOC);
 $QueueStuff = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);  
-        
+$Check = $CheckQueue->fetchAll(PDO::FETCH_ASSOC);
+
+//    if ($Check > 0){
+//        echo 'alert("validation failed false");';
+//    }
+//    else{
+//        
+//    }
+    
 echo '<form method="POST" onsubmit="return validateMyForm();">';   
 
-        
+    if ($Check > 0){
+        echo 'alert("validation failed false");';
+    }
+    else {
     if (isset($_POST['comments'])){
       
    $studentNameId = $_POST["StudentName"];
@@ -48,6 +64,7 @@ echo '<form method="POST" onsubmit="return validateMyForm();">';
             echo $e;
          }          
 }
+    }
    // echo $studentNameId;    
         
     echo '<select name="courseCode">';            
@@ -94,29 +111,29 @@ echo '<form method="POST" onsubmit="return validateMyForm();">';
             function validateMyForm() {
                 var result = <?php echo alertCheck(); ?>
                     return result;
-                <?php
-                function alertCheck(){
-                $nullOperand = NULL; 
-                foreach ($QueueStuff as $Que) {
-                    $endTime = $Que['end_time'];
-                    $Student = $Que['student_name'];
-                    foreach ($StLst as $ListOfStudents){
-                             $id = $ListOfStudents['id'];
-                    if ($id == $Student && $endTime === $nullOperand){    
-               // echo 'if ('.$id.' == '.$Student.' && '.$endTime.' === '.$nullOperand.'){ <br>';
-                        echo 'alert("validation failed false");<br>';
-                        return 'false';
-                        echo 'return false;<br>';
-                    }
-                        //echo 'else{<br>';
-                    else{        
-                        return 'true';
-                        echo 'return true;<br>';    
-                    }
-                    }
-                    }
-                }
-                ?>
+//                <?php
+//                function alertCheck(){
+//                $nullOperand = NULL; 
+//                foreach ($QueueStuff as $Que) {
+//                    $endTime = $Que['end_time'];
+//                    $Student = $Que['student_name'];
+//                    foreach ($StLst as $ListOfStudents){
+//                             $id = $ListOfStudents['id'];
+//                    if ($id == $Student && $endTime === $nullOperand){    
+//               // echo 'if ('.$id.' == '.$Student.' && '.$endTime.' === '.$nullOperand.'){ <br>';
+//                        echo 'alert("validation failed false");<br>';
+//                        return 'false';
+//                        echo 'return false;<br>';
+//                    }
+//                        //echo 'else{<br>';
+//                    else{        
+//                        return 'true';
+//                        echo 'return true;<br>';    
+//                    }
+//                    }
+//                    }
+//                }
+//                ?>
                 }
                 
                 
