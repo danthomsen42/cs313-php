@@ -49,7 +49,7 @@ foreach ($AstLst as $asls){
 var_dump($_SESSION);
 
 $_SESSION[1][3] = false;
-
+var_dump($_SESSION);
 $QueueInfo-> execute();
 
 
