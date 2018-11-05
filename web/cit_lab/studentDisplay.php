@@ -32,14 +32,14 @@ $joined-> execute();
 $StudentList-> execute();
 $QueueInfo->execute();
 echo 'Hello2';    
-$CheckQueue->execute();    
+    
 echo 'Hello3';   
 $ast = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $cls = $courses->fetchAll(PDO::FETCH_ASSOC);
 $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
 $StLst = $StudentList->fetchAll(PDO::FETCH_ASSOC);
 $QueueStuff = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);  
-$Check = $CheckQueue->fetchAll(PDO::FETCH_ASSOC);
+
 
 //    if ($Check > 0){
 //        echo 'alert("validation failed false");';
@@ -50,12 +50,10 @@ $Check = $CheckQueue->fetchAll(PDO::FETCH_ASSOC);
 echo 'Hello4';       
 echo '<form method="POST" onsubmit="return validateMyForm();">';   
 echo 'Hello5';   
-    if ($Check > 0){
-        echo 'alert("validation failed false");';
-    }
-    else {
+    
+
     if (isset($_POST['comments'])){
-      
+     
    $studentNameId = $_POST["StudentName"];
    $courseCodeId = $_POST["courseCode"];
    $studentNotes = $_POST["comments"];
@@ -64,13 +62,18 @@ echo 'Hello5';
     (\''.$studentNameId.'\',\''.$courseCodeId.'\',\''.$studentNotes.'\', now());');    
       
             try {
+        $CheckQueue->execute();
+        $Check = $CheckQueue->fetchAll(PDO::FETCH_ASSOC);    
+            if ($Check > 0){
+        echo 'alert("validation failed false");';
+    }    
          $queueInput->execute();
         }
          catch(Exception $e){
             echo $e;
          }          
         }
-    }
+    
    // echo $studentNameId;    
         
     echo '<select name="courseCode">';            
