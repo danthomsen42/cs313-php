@@ -58,10 +58,8 @@ echo 'Hello5';
     $queueInput = $db->prepare('INSERT INTO queue (student_name, course_code, comments, enter_time) VALUES
     (\''.$studentNameId.'\',\''.$courseCodeId.'\',\''.$studentNotes.'\', now());');    
       
-            try {
-      //  $studentNumber = $_POST['StudentName'];  
-    //echo $studentNumber;  
-$CheckQueue = $db->prepare('SELECT COUNT(*) FROM queue WHERE end_time = NULL AND student_name = '.$studentNameId);  
+        try {  
+            $CheckQueue = $db->prepare('SELECT COUNT(*) FROM queue WHERE end_time = NULL AND student_name = \''.$studentNameId.'\'');  
         
         $CheckQueue->execute();
         $Check = $CheckQueue->fetchAll(PDO::FETCH_ASSOC);    
