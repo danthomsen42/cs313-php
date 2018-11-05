@@ -28,7 +28,7 @@ $joined-> execute();
 $StudentList-> execute();
 $QueueInfo->execute();
 $CheckQueue->execute();    
-
+echo 'Hello2';   
 $ast = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $cls = $courses->fetchAll(PDO::FETCH_ASSOC);
 $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
