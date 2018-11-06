@@ -14,7 +14,7 @@
             height: 20%;
             background-color: chartreuse;
             position: absolute;
-            top: 30%;
+            top: 40%;
             left: 30%;
             font-size: 60px;    
         }
@@ -24,7 +24,7 @@
             height: 20%;
             background-color: orangered;
             position: absolute;
-            top: 60%;
+            top: 70%;
             left: 30%;
             font-size: 60px;
         }
@@ -42,7 +42,7 @@
             font-size: 60px;
             position: absolute;
             left:10%;
-            top: 15%;
+            top: 20%;
         }
         
     
