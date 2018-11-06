@@ -64,7 +64,7 @@ echo 'Hello5';
         $CheckQueue->execute();
         $Check = $CheckQueue->fetchAll(PDO::FETCH_ASSOC);    
             if ($Check > 0){
-        echo 'alert("validation failed false");';
+        echo '<script>alert("validation failed false");</script>';
     }    
          $queueInput->execute();
         }
