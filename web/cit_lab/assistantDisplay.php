@@ -9,12 +9,22 @@
     
     <style>
     
-        #btn{
-            width: 10%;
-            height: 2%;
+        #btn1{
+            width: 40%;
+            height: 20%;
+            background-color: chartreuse;
+            position: absolute;
+            top: 30%;
+            left: 30%
         }
         
-    
+        #btn2{
+            width: 40%;
+            height: 20%;
+            background-color: orangered;
+            top: 60%;
+            left: 30%
+        }
     
     
     
@@ -101,7 +111,7 @@ $asstnt = $Assistants->fetchAll(PDO::FETCH_ASSOC);
           
 
           
-          echo '<input type="submit" name="HelpButton" value="Help" id="btn">';
+          echo '<input type="submit" name="HelpButton" value="Help" id="btn1">';
  //       echo '</form>'; 
 ?>
 <!--        <form method="POST">-->
@@ -130,7 +140,7 @@ $asstnt = $Assistants->fetchAll(PDO::FETCH_ASSOC);
           
             ?>
 
-        <input type="submit" name="FinishedButton" value="Finished" id="btn">
+        <input type="submit" name="FinishedButton" value="Finished" id="btn2">
     </form>
 
 </body>
