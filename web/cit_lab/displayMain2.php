@@ -110,7 +110,7 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
                 $entrTm = strtotime($enterTime);
                 $current = strtotime($_SERVER['REQUEST_TIME']);
                 
-                $diff = (($current - $entrTm)/3600);
+                $diff = ((($current - $entrTm)/3600)/60);
                 
                 echo '<td>'.$diff.' --- '.$entrTm.'</td>';
             echo '</tr>';
