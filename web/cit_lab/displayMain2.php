@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 //conect to DB
 require('dbConnect.php');
 $db = get_db();

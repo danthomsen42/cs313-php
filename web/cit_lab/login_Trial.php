@@ -4,12 +4,15 @@
     <?php
 // Always start this first
 session_start();
-
+require('dbConnect.php');
+$db = get_db();
+    
+    
 if ( ! empty( $_POST ) ) {
     if ( isset( $_POST['username'] ) && isset( $_POST['password'] ) ) {
         // Getting submitted user data from database
-        $con = new mysqli($db_host, $db_user, $db_pass, $db_name);
-        $stmt = $con->prepare("SELECT * FROM users WHERE username = ?");
+        //$con = new mysqli($db_host, $db_user, $db_pass, $db_name);
+        $stmt = $db->prepare('SELECT * FROM users WHERE username = "Donatello47"');
         $stmt->bind_param('s', $_POST['username']);
         $stmt->execute();
         $result = $stmt->get_result();
