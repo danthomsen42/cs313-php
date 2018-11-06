@@ -23,7 +23,7 @@ $QueueInfo = $db->prepare('SELECT id, student_name, course_code, ast_name, enter
 $StudentByID = $db->prepare('SELECT
 s.student_first_name, q.id, c.course_code, a.ast_name, comments, enter_time, start_time, end_time
 FROM queue q
-JOIN classes c on q.course_code = c.id
+JOIN classes c on c.id = q.course_code
 LEFT JOIN assistants a on a.id = q.ast_name
 JOIN students s on s.id = q.student_name
 WHERE s.id = q.student_name
