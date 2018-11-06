@@ -37,7 +37,7 @@ $asstnt = $Assistants->fetchAll(PDO::FETCH_ASSOC);
             $courseCode = $Que['classes_course_code'];
             $startTime = $Que['start_time'];
             if ($endTime === NULL){      
-          echo '<option value='.$queueID.'>'.$studentFirstName.' '.$studentLastName.' ------- '. $courseCode.' '.$courseCode.'</option>';
+          echo '<option value='.$queueID.'>'.$studentFirstName.' '.$studentLastName.' ------- '. $courseCode.'</option>';
           // echo $queueID;     
                 
             }
@@ -62,8 +62,8 @@ $asstnt = $Assistants->fetchAll(PDO::FETCH_ASSOC);
           if (isset($_POST['StudentName']))
           {
               $namie = $_POST['StudentName'];
-              
-            echo 'this is me'. $namie;
+              var_dump($_POST);
+            echo 'this is me '.$namie;
 //         $Assistant_help = $db->prepare('UPDATE queue SET start_time = now() WHERE queue.id = \''.$.'\'');
 //          $Assistant_help->execute(); 
               
