@@ -114,9 +114,9 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
                 
                 $entrTm = $enterTime;
                 
-                $diff = (($current - $entrTm)/60);
+                $diff = number_format((float)(($current - $entrTm)/60), 2, '.', '');
                 
-                echo '<td>'.$diff.' --- '.$entrTm.' --- '.$current.'</td>';
+                echo '<td>'.$diff.'</td>';
             echo '</tr>';
             }
 //            else{

@@ -89,8 +89,8 @@ $asstnt = $Assistants->fetchAll(PDO::FETCH_ASSOC);
         </form> 
         <form method="POST"> 
           <?php
-            
-          $Assistant_finish = $db->prepare('UPDATE queue SET end_time = now() WHERE queue.id = 3');
+            $timey = time();
+          $Assistant_finish = $db->prepare('UPDATE queue SET end_time = '.$timey.' WHERE queue.id = 3');
           
           
           $Assistant_finish->execute();

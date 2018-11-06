@@ -32,9 +32,9 @@ CREATE TABLE queue
     , student_name INT NOT NULL REFERENCES students(id)
     , course_code INT NOT NULL REFERENCES classes(id)
     , ast_name INT REFERENCES assistants(id)
-    , enter_time TIMESTAMP NOT NULL
-    , start_time TIMESTAMP
-    , end_time TIMESTAMP
+    , enter_time INT NOT NULL
+    , start_time INT
+    , end_time INT
     , comments VARCHAR(200)
 );
 
