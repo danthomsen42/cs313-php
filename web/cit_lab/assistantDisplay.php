@@ -142,7 +142,7 @@ $asstnt = $Assistants->fetchAll(PDO::FETCH_ASSOC);
              if (isset($_POST['StudentName']))
           {
             $namiey = $_POST['StudentName'];
-              var_dump($_POST);
+             // var_dump($_POST);
             $timey = time();
           $Assistant_finish = $db->prepare('UPDATE queue SET end_time = '.$timey.' WHERE queue.id = '.$namiey);
           
