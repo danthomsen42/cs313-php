@@ -30,7 +30,7 @@ $StuID = $StudentByID->fetchAll(PDO::FETCH_ASSOC);
 $AstLst = $assistantList->fetchAll(PDO::FETCH_ASSOC);
           
           //var_dump($AstLst);
-var_dump($_SESSION);
+//var_dump($_SESSION);
 foreach ($AstLst as $asls){
     $astlstID = $asls['id'];
     $astlstName = $asls['ast_name'];
