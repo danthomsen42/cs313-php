@@ -65,7 +65,7 @@ echo 'Hello5';
         $Check = $CheckQueue->fetchAll(PDO::FETCH_ASSOC);
             foreach ($Check as $chk){
                 $chk = $Check['count'];
-                echo $chk;
+                echo 'You got me'.$chk;
                 if ($chk > 0){
         echo '<script>alert("validation failed '.$chk.' false");</script>';
     } 
