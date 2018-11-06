@@ -111,8 +111,8 @@ $asstnt = $Assistants->fetchAll(PDO::FETCH_ASSOC);
           {
               $namie = $_POST['StudentName'];
               $astNamie = $_POST['AssistantName'];
-              var_dump($_POST);
-            echo 'this is me '.$namie;
+//              var_dump($_POST);
+//            echo 'this is me '.$namie;
              $curr = time(); 
            // $curr= $_SERVER['REQUEST_TIME'];
          $Assistant_help = $db->prepare('UPDATE queue SET start_time = '.$curr.', ast_name = '.$astNamie.' WHERE queue.id = '.$namie);

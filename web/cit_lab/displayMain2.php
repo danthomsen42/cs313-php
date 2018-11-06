@@ -46,7 +46,7 @@ foreach ($AstLst as $asls){
     
 }
 
-var_dump($_SESSION);
+//var_dump($_SESSION);
 
 $_SESSION[1][3] = false;
 

@@ -28,9 +28,9 @@ $courses-> execute();
 $joined-> execute();
 $StudentList-> execute();
 $QueueInfo->execute();
-echo 'Hello2';    
+//echo 'Hello2';    
     
-echo 'Hello3';   
+//echo 'Hello3';   
 $ast = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $cls = $courses->fetchAll(PDO::FETCH_ASSOC);
 $jnd = $joined->fetchAll(PDO::FETCH_ASSOC);
@@ -44,9 +44,9 @@ $QueueStuff = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
 //    else{
 //        
 //    }
-echo 'Hello4';       
+//echo 'Hello4';       
 echo '<form method="POST" onsubmit="return validateMyForm();">';   
-echo 'Hello5';   
+//echo 'Hello5';   
     
 
     if (isset($_POST['comments'])){
