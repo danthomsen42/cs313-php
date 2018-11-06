@@ -97,7 +97,7 @@ $asstnt = $Assistants->fetchAll(PDO::FETCH_ASSOC);
             $namie = $_POST['StudentName'];
               
             $timey = time();
-          $Assistant_finish = $db->prepare('UPDATE queue SET end_time = '.$timey.' WHERE queue.id ='.$namie);
+          $Assistant_finish = $db->prepare('UPDATE queue SET end_time = '.$timey.' WHERE queue.id =\''.$namie'\'');
           
           
           $Assistant_finish->execute();
