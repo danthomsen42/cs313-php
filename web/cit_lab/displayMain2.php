@@ -106,7 +106,7 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
                 echo '<td>'.$courseCode.'</td>';
                 echo '<td>'.$roger.'</td>';
                 echo '<td>'.$assistantName.'</td>';
-                echo '<td>'.$endTime.'</td>';
+                echo '<td>'.$enterTime.'</td>';
             echo '</tr>';
             }
 //            else{
