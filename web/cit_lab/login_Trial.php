@@ -27,7 +27,7 @@ if ( ! empty( $_POST ) ) {
 ?>
     </head>
 <body>
-    <form action="" method="post">
+    <form action="https://radiant-gorge-54637.herokuapp.com/cit_lab/assistantDisplay.php" method="post">
     <input type="text" name="username" placeholder="Enter your username" required>
     <input type="password" name="password" placeholder="Enter your password" required>
     <input type="submit" value="Submit">
