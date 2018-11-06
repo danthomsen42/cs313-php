@@ -31,11 +31,17 @@
     
         
         #AssistantSelect{
+            width: 40%;
             font-size: 60px;
-            
+            position: absolute;
+            left:30%;
         }
         #NameSelect{
+            width: 40%;
             font-size: 60px;
+            position: absolute;
+            left:30%;
+            top: 15%;
         }
         
     
