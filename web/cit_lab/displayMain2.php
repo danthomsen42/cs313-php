@@ -106,7 +106,13 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
                 echo '<td>'.$courseCode.'</td>';
                 echo '<td>'.$roger.'</td>';
                 echo '<td>'.$assistantName.'</td>';
-                echo '<td>'.$enterTime.'</td>';
+                
+                $entrTm = strtotime($enterTime);
+                $current = strtotime($_SERVER['REQUEST_TIME']);
+                
+                $diff = $current - $entrTm;
+                
+                echo '<td>'.$diff.'</td>';
             echo '</tr>';
             }
 //            else{
