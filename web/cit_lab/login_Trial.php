@@ -12,7 +12,7 @@ if ( ! empty( $_POST ) ) {
     if ( isset( $_POST['username'] ) && isset( $_POST['password'] ) ) {
         // Getting submitted user data from database
         //$con = new mysqli($db_host, $db_user, $db_pass, $db_name);
-        $stmt = $db->prepare('SELECT * FROM lablogin WHERE username = \'Donatello47\'');
+        $stmt = $db->prepare('SELECT * FROM lablogin WHERE username = Donatello47');
         //$stmt->bind_param('s', $_POST['username']);
         $stmt->execute();
         $result = $stmt->get_result();
