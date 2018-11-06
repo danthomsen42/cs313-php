@@ -87,9 +87,11 @@ $asstnt = $Assistants->fetchAll(PDO::FETCH_ASSOC);
           
           echo '<input type="submit" name="HelpButton" value="Help">';
         echo '</form>'; 
+?>
+        <form method="POST">
+        <?php
         
-        
-        echo '<form method="POST">'; 
+        //echo ''; 
     
         if ($_POST['FinishedButton']){    
              if (isset($_POST['StudentName']))
