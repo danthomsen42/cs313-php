@@ -31,7 +31,10 @@
     
     <p id="toughCookie">This will be my homepage for this class, though I feel I have to add some disclaimers for this site in its current state. <br> <br>
     First off, the controls on the left side currently don't do anything (or do they?), and the game at the center is no where near completed. I might fix it or update it, but that's fully secondary. <br><br>
-    Secondly, I plan on having links on this side for future games or future sites for this class.
+    The Assignments: <br>
+     <a href="https://radiant-gorge-54637.herokuapp.com/cit_lab/assistantDisplay.php">The Queue</a><br>
+    <a href="https://radiant-gorge-54637.herokuapp.com/cit_lab/studentDisplay.php">Student Sign-In/Sign-Up</a><br>    
+        <a href="https://radiant-gorge-54637.herokuapp.com/cit_lab/assistantDisplay.php">Assistant's Page</a>    
     <br><br>
     For now, this will be how it'll look.  <br><br> Below is the current state of my in-development physical arcade machine. This is displayed using html generated in php.
     
