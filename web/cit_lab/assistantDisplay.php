@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
-<head>    
+
+<head>
 </head>
-    <body>
-    
-      <form method="POST">
-        
-          
-          
-          
+
+<body>
+
+    <form method="POST">
+
+
+
+
         <?php  
           require('dbConnect.php');
           $db = get_db();
@@ -59,6 +61,8 @@ $asstnt = $Assistants->fetchAll(PDO::FETCH_ASSOC);
           //When the button is pressed, it UPDATES queue and sets the end_time to the current time stamp
           
           //figure out how to auto increment to next availbale individual according to courses assitant's can teach, if students are already being helped or not, and if not, being assigned to that next availble student with the course the assistant can teach
+         
+          if ($_POST["HelpButton"]){
           if (isset($_POST['StudentName']))
           {
               $namie = $_POST['StudentName'];
@@ -74,22 +78,20 @@ $asstnt = $Assistants->fetchAll(PDO::FETCH_ASSOC);
           //When Assistant is assigned, update the Start_time part in the queue.
           
           //Don't Bother with a skip button at this time
-        
+          }
           
-          echo '<script>
-    if ( window.history.replaceState ) {
-        window.history.replaceState( null, null, window.location.href );
-    }
-</script>';
+     
           
           
 
-          ?>
-               <input type="submit" value="Help">  
-        </form> 
-        <form method="POST"> 
-          <?php
-            
+          
+          echo '<input type="submit" name="HelpButton" value="Help">';
+        echo '</form>'; 
+        
+        
+        echo '<form method="POST">'; 
+    
+        if ($_POST['FinishedButton']){    
               if (isset($_POST['StudentName']))
           {
             $namie = $_POST['StudentName'];
@@ -100,10 +102,19 @@ $asstnt = $Assistants->fetchAll(PDO::FETCH_ASSOC);
           
           $Assistant_finish->execute();
               }
-            ?>
+        }
           
-        <input type="submit" value="Finished">
-        </form>  
-        
-    </body>
+               echo '<script>
+    if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
+    }
+</script>';
+          
+            ?>
+
+        <input type="submit" name="FinishedButton" value="Finished">
+    </form>
+
+</body>
+
 </html>
