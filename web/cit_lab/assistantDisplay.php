@@ -71,7 +71,7 @@ $asstnt = $Assistants->fetchAll(PDO::FETCH_ASSOC);
             echo 'this is me '.$namie;
              $curr = time(); 
            // $curr= $_SERVER['REQUEST_TIME'];
-         $Assistant_help = $db->prepare('UPDATE queue SET start_time = '.$curr.', ast_name = '.$astNamie.' WHERE queue.id = \''.$namie.'\'');
+         $Assistant_help = $db->prepare('UPDATE queue SET start_time = '.$curr.', ast_name = '.$astNamie.' WHERE queue.id = '.$namie);
           $Assistant_help->execute(); 
               
         //  }
@@ -94,10 +94,10 @@ $asstnt = $Assistants->fetchAll(PDO::FETCH_ASSOC);
         if ($_POST['FinishedButton']){    
       //        if (isset($_POST['StudentName']))
         //  {
-            $namie = $_POST['StudentName'];
+            $namiey = $_POST['StudentName'];
               
             $timey = time();
-          $Assistant_finish = $db->prepare('UPDATE queue SET end_time = '.$timey.' WHERE queue.id = \''.$namie'\'');
+          $Assistant_finish = $db->prepare('UPDATE queue SET end_time = '.$timey.' WHERE queue.id = '.$namiey);
           
           
           $Assistant_finish->execute();
