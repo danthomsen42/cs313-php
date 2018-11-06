@@ -37,7 +37,7 @@ $asstnt = $Assistants->fetchAll(PDO::FETCH_ASSOC);
             $courseCode = $Que['classes_course_code'];
             $startTime = $Que['start_time'];
             if ($endTime === NULL){      
-          echo '<option value='.$queueID.'>'.$studentFirstName.' '.$studentLastName.' ------- '. $courseCode.' '.$startTime.'</option>';
+          echo '<option value='.$queueID.'>'.$studentFirstName.' '.$studentLastName.' ------- '. $courseCode.' '.$courseCode.'</option>';
           // echo $queueID;     
                 
             }
