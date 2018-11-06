@@ -59,7 +59,7 @@ echo 'Hello5';
     (\''.$studentNameId.'\',\''.$courseCodeId.'\',\''.$studentNotes.'\', now());');    
       
         try {  
-            $CheckQueue = $db->prepare('SELECT COUNT(*) FROM queue WHERE end_time IS NULL AND student_name = \''.$studentNameId.'\'');  
+            $CheckQueue = $db->prepare('SELECT COUNT(*) FROM queue WHERE end_time IS NULL AND student_name IS \''.$studentNameId.'\'');  
         
         $CheckQueue->execute();
         $Check = $CheckQueue->fetchAll(PDO::FETCH_ASSOC);    
