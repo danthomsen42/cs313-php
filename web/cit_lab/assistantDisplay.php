@@ -6,6 +6,22 @@
 
 <body>
 
+    
+    <style>
+    
+        .btn{
+            width: 10%;
+            height: 2%;
+        }
+        
+    
+    
+    
+    
+    </style>
+    
+    
+    
     <form method="POST">
 
 
@@ -85,7 +101,7 @@ $asstnt = $Assistants->fetchAll(PDO::FETCH_ASSOC);
           
 
           
-          echo '<input type="submit" name="HelpButton" value="Help">';
+          echo '<input type="submit" name="HelpButton" value="Help" id="btn">';
  //       echo '</form>'; 
 ?>
 <!--        <form method="POST">-->
@@ -114,7 +130,7 @@ $asstnt = $Assistants->fetchAll(PDO::FETCH_ASSOC);
           
             ?>
 
-        <input type="submit" name="FinishedButton" value="Finished">
+        <input type="submit" name="FinishedButton" value="Finished" id="btn">
     </form>
 
 </body>
