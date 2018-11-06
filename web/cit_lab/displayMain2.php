@@ -17,7 +17,6 @@ queue.id, student_name, queue.course_code as queue_course_code, queue.ast_name a
 FROM students
 JOIN queue ON queue.student_name = students.id
 JOIN classes ON queue.course_code = classes.id
-JOIN assistants ON queue.ast_name = assistants.id
 WHERE queue.student_name = students.id
 ORDER BY queue.id;');
 $StudentByID-> execute();
