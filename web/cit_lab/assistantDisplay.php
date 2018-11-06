@@ -9,7 +9,7 @@
     
     <style>
     
-        .btn{
+        #btn{
             width: 10%;
             height: 2%;
         }
