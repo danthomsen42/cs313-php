@@ -37,10 +37,10 @@
             left:30%;
         }
         #NameSelect{
-            width: 40%;
+            width: 60%;
             font-size: 60px;
             position: absolute;
-            left:30%;
+            left:20%;
             top: 15%;
         }
         
