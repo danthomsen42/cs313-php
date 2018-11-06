@@ -112,7 +112,7 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
                 
                 $diff = (($current - $entrTm)/60000);
                 
-                echo '<td>'.$diff.' --- '.$entrTm.'</td>';
+                echo '<td>'.$diff.' --- '.$entrTm.' --- '.$current.'</td>';
             echo '</tr>';
             }
 //            else{
