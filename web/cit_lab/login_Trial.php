@@ -13,7 +13,7 @@ if ( ! empty( $_POST ) ) {
         // Getting submitted user data from database
         //$con = new mysqli($db_host, $db_user, $db_pass, $db_name);
         $stmt = $db->prepare('SELECT * FROM users WHERE username = "Donatello47"');
-        $stmt->bind_param('s', $_POST['username']);
+        //$stmt->bind_param('s', $_POST['username']);
         $stmt->execute();
         $result = $stmt->get_result();
     	$user = $result->fetch_object();
