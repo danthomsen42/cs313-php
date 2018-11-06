@@ -64,8 +64,8 @@ $asstnt = $Assistants->fetchAll(PDO::FETCH_ASSOC);
               $namie = $_POST['StudentName'];
               var_dump($_POST);
             echo 'this is me '.$namie;
-//         $Assistant_help = $db->prepare('UPDATE queue SET start_time = now() WHERE queue.id = \''.$.'\'');
-//          $Assistant_help->execute(); 
+         $Assistant_help = $db->prepare('UPDATE queue SET start_time = now() WHERE queue.id = \''.$namie.'\'');
+          $Assistant_help->execute(); 
               
           }
           //When Assistant is assigned, update the Start_time part in the queue.
