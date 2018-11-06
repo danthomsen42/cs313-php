@@ -70,7 +70,7 @@ echo 'Hello5';
                 if ($chk > 0){
         echo '<script>alert("validation failed '.$chk.' false");</script>';
     } 
-            }
+           // }
                
          $queueInput->execute();
         }
