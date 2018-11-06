@@ -33,7 +33,7 @@ $asstnt = $Assistants->fetchAll(PDO::FETCH_ASSOC);
             $endTime = $Que['end_time'];
             $studentFirstName = $Que['student_first_name'];
                 $studentLastName = $Que['student_last_name'];
-            $queueID = $Que['queue.id'];
+            $queueID = $Que['id'];
             $courseCode = $Que['classes_course_code'];
             $startTime = $Que['start_time'];
             if ($endTime === NULL){      
