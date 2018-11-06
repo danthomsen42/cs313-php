@@ -27,6 +27,15 @@
             left: 30%
         }
     
+        
+        #AssistantSelect{
+            font-size: 30px;
+            
+        }
+        #NameSelect{
+            font-size: 30px;
+        }
+        
     
     
     </style>
@@ -57,7 +66,7 @@ $Assistants->execute();
 $asstnt = $Assistants->fetchAll(PDO::FETCH_ASSOC);
           
           
-    echo '<select name="StudentName">';
+    echo '<select name="StudentName" id="NameSelect">';
             foreach ($StuID as $Que) {
             $endTime = $Que['end_time'];
             $studentFirstName = $Que['student_first_name'];
@@ -73,7 +82,7 @@ $asstnt = $Assistants->fetchAll(PDO::FETCH_ASSOC);
             }
                echo '</select>';   
           
-    echo '<select name="AssistantName">';
+    echo '<select name="AssistantName" id="AssistantSelect">';
           foreach ($asstnt as $ast) {
               $astID = $ast['id'];
               $astName = $ast['ast_name'];
