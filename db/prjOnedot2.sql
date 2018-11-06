@@ -64,6 +64,18 @@ FROM
 assistants, classes, assistant_classes
 WHERE assistant_classes.ast_name = assistants.id and assistant_classes.course_code = classes.id;
 
+
+CREATE TABLE lablogin
+(
+  id SERIAL PRIMARY KEY
+    , username VARCHAR(50) NOT NULL
+    , passwordy VARCHAR(50) NOT NULL
+);
+
+INSERT INTO lablogin(username, passwordy) VALUES ('Donatello47','nohashing49' );
+
+
+
 /*
 ALTER TABLE queue
 ADD COLUMN notes VARCHAR(200);
