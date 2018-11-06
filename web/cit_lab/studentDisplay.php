@@ -117,8 +117,8 @@ echo 'Hello5';
 
         <script>
             function validateMyForm() {
-                var result = <?php echo alertCheck(); ?>
-                return result;
+             //   var result = <?php echo alertCheck(); ?>
+               // return result;
                 //                <?php
                 //                function alertCheck(){
                 //                $nullOperand = NULL; 
