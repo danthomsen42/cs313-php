@@ -110,7 +110,7 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
                 //$entrTm = strtotime($enterTime);
                 //$current = strtotime($_SERVER['REQUEST_TIME']);
                 
-                $current = ($_SERVER['REQUEST_TIME']);
+                $current = time();
                 
                 $entrTm = $enterTime;
                 

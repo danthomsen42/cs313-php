@@ -54,9 +54,9 @@ echo 'Hello5';
    $studentNameId = $_POST["StudentName"];
    $courseCodeId = $_POST["courseCode"];
    $studentNotes = $_POST["comments"];
-        
+        $inputTime = time();
     $queueInput = $db->prepare('INSERT INTO queue (student_name, course_code, comments, enter_time) VALUES
-    (\''.$studentNameId.'\',\''.$courseCodeId.'\',\''.$studentNotes.'\', now());');    
+    (\''.$studentNameId.'\',\''.$courseCodeId.'\',\''.$studentNotes.'\', '.$inputTime.');');    
       
         try {  
             $CheckQueue = $db->prepare('SELECT COUNT(*) FROM queue WHERE end_time IS NULL AND student_name = \''.$studentNameId.'\'');  
