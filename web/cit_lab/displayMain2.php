@@ -13,10 +13,11 @@ $QueueInfo = $db->prepare('SELECT id, student_name, course_code, ast_name, enter
 
 $StudentByID = $db->prepare('SELECT
 students.student_first_name,
-queue.id, student_name, queue.course_code as queue_course_code, ast_name, enter_time, start_time, end_time, comments, classes.course_code as classes_course_code 
+queue.id, student_name, queue.course_code as queue_course_code, queue.ast_name as queue_ast_name, enter_time, start_time, end_time, comments, classes.course_code as classes_course_code, assistants.ast_name as assist_ast_name 
 FROM students
 JOIN queue ON queue.student_name = students.id
 JOIN classes ON queue.course_code = classes.id
+JOIN assistants ON queue.ast_name = assistants.id
 WHERE queue.student_name = students.id
 ORDER BY queue.id;');
 $StudentByID-> execute();
