@@ -22,6 +22,7 @@
             width: 40%;
             height: 20%;
             background-color: orangered;
+            position: absolute;
             top: 60%;
             left: 30%
         }
