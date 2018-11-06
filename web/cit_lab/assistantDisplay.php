@@ -63,8 +63,8 @@ $asstnt = $Assistants->fetchAll(PDO::FETCH_ASSOC);
           //figure out how to auto increment to next availbale individual according to courses assitant's can teach, if students are already being helped or not, and if not, being assigned to that next availble student with the course the assistant can teach
          
           if ($_POST["HelpButton"]){
-          //if (isset($_POST['StudentName']))
-          //{
+          if (isset($_POST['StudentName']))
+          {
               $namie = $_POST['StudentName'];
               $astNamie = $_POST['AssistantName'];
               var_dump($_POST);
@@ -74,7 +74,7 @@ $asstnt = $Assistants->fetchAll(PDO::FETCH_ASSOC);
          $Assistant_help = $db->prepare('UPDATE queue SET start_time = '.$curr.', ast_name = '.$astNamie.' WHERE queue.id = '.$namie);
           $Assistant_help->execute(); 
               
-        //  }
+          }
           //When Assistant is assigned, update the Start_time part in the queue.
           
           //Don't Bother with a skip button at this time
@@ -92,8 +92,8 @@ $asstnt = $Assistants->fetchAll(PDO::FETCH_ASSOC);
         echo '<form method="POST">'; 
     
         if ($_POST['FinishedButton']){    
-      //        if (isset($_POST['StudentName']))
-        //  {
+             if (isset($_POST['StudentName']))
+          {
             $namiey = $_POST['StudentName'];
               
             $timey = time();
@@ -102,7 +102,7 @@ $asstnt = $Assistants->fetchAll(PDO::FETCH_ASSOC);
           
           $Assistant_finish->execute();
               }
-        //}
+        }
           
                echo '<script>
     if ( window.history.replaceState ) {
