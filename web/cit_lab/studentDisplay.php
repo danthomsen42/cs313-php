@@ -117,7 +117,7 @@ echo 'Hello5';
 
         <script>
             function validateMyForm() {
-             //   var result = <?php echo alertCheck(); ?>
+             //   var result = 
                // return result;
                 //                <?php
                 //                function alertCheck(){
