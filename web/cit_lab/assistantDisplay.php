@@ -15,7 +15,8 @@
             background-color: chartreuse;
             position: absolute;
             top: 30%;
-            left: 30%
+            left: 30%;
+            font-size: 60px;    
         }
         
         #btn2{
@@ -24,16 +25,17 @@
             background-color: orangered;
             position: absolute;
             top: 60%;
-            left: 30%
+            left: 30%;
+            font-size: 60px;
         }
     
         
         #AssistantSelect{
-            font-size: 30px;
+            font-size: 60px;
             
         }
         #NameSelect{
-            font-size: 30px;
+            font-size: 60px;
         }
         
     
