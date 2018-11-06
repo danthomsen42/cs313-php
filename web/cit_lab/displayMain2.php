@@ -106,7 +106,7 @@ $Queue = $QueueInfo->fetchAll(PDO::FETCH_ASSOC);
             $studentName = $Que['student_first_name'];
             
 //            $studentName = $Que['student_name'];
-            $courseCode = $Que['classes_course_code'];
+            $courseCode = $Que['course_code'];
             $startTime = $Que['start_time'];
             $assistantName = $Que['ast_name'];
             $roger = $Que['comments'];
