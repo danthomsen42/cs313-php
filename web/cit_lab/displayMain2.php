@@ -11,14 +11,24 @@ $db = get_db();
 $QueueInfo = $db->prepare('SELECT id, student_name, course_code, ast_name, enter_time, start_time, end_time, comments FROM queue');
 
 
+//$StudentByID = $db->prepare('SELECT
+//students.student_first_name,
+//queue.id, student_name, queue.course_code as queue_course_code, ast_name, enter_time, start_time, end_time, comments, classes.course_code as classes_course_code
+//FROM students
+//JOIN queue ON queue.student_name = students.id
+//JOIN classes ON queue.course_code = classes.id
+//WHERE queue.student_name = students.id
+//ORDER BY queue.id;');
+
 $StudentByID = $db->prepare('SELECT
-students.student_first_name,
-queue.id, student_name, queue.course_code as queue_course_code, ast_name, enter_time, start_time, end_time, comments, classes.course_code as classes_course_code
-FROM students
-JOIN queue ON queue.student_name = students.id
-JOIN classes ON queue.course_code = classes.id
-WHERE queue.student_name = students.id
-ORDER BY queue.id;');
+s.student_first_name, q.id, c.course_code, a.ast_name
+FROM queue q
+JOIN classes c on c.id = q.course_code
+LEFT JOIN assistants a on a.id = q.ast_name
+JOIN students s on s.id = q.student_name
+WHERE s.id = q.student_name
+ORDER BY q.id;');
+
 $StudentByID-> execute();
 $StuID = $StudentByID->fetchAll(PDO::FETCH_ASSOC);
 
